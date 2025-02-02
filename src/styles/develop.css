@@ -1,0 +1,36 @@
+.header_wrap {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 10px 20px;
+    background-color: #f8f9fa;
+}
+
+.main_menu ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+}
+
+/* Problems List */
+.problems-list {
+    list-style: none;
+    padding: 0;
+    margin: 20px 0;
+    line-height: 1.8;
+}
+
+.problems-list li {
+    margin-bottom: 10px;
+}
+
+/* Items */
+.items {
+    display: flex;
+    justify-content: space-around;
+}
+
+.item img {
+    max-width: 100px;
+    margin-bottom: 10px;
+}

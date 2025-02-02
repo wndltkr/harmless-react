@@ -1,0 +1,55 @@
+.section1 {
+    position: relative;
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+    overflow: hidden;
+}
+
+.common_about_wrap {
+    text-align: center;
+}
+
+.common_about p {
+    margin: 0;
+    color: #333;
+}
+
+.harmless_img img {
+    max-width: 80%;
+    margin: 0 auto;
+}
+
+.circle1, .circle2, .circle3 {
+    position: absolute;
+}
+
+.circle1 {
+    top: 10%;
+    left: 5%;
+}
+
+.circle2 {
+    bottom: 20%;
+    right: 10%;
+}
+
+.circle3 {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.fade-in-up {
+    animation: fadeInUp 1.5s ease-in-out;
+}
+
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

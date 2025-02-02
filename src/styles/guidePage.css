@@ -1,0 +1,106 @@
+/* 페이지 전체 스타일 */
+.guide_page {
+    font-family: "Noto Sans KR", sans-serif;
+    padding: 50px 20px;
+}
+
+/* 상단 배너 */
+.sub_top_banner {
+    background: #009373;
+    padding: 40px;
+    text-align: center;
+    color: white;
+}
+
+.sub_top_banner .title {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+.hr-line {
+    width: 50px;
+    height: 3px;
+    background: white;
+    margin: 10px auto;
+}
+
+/* 매입 단가 섹션 */
+.guide_price_wrap {
+    text-align: center;
+    margin-top: 40px;
+}
+
+.sub_title {
+    font-size: 24px;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.price_list {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.price_item {
+    background: #f5f5f5;
+    padding: 15px 20px;
+    border-radius: 10px;
+    width: 250px;
+}
+
+.price_title {
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 10px;
+}
+
+/* 수거 가능 품목 */
+.guide_collection_wrap {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.collection_item {
+    background: #f5f5f5;
+    padding: 15px;
+    border-radius: 10px;
+    text-align: center;
+}
+
+.item_img img {
+    width: 100px;
+    height: auto;
+}
+
+/* 수거 불가능 품목 */
+.guide_no_collection_wrap {
+    margin-top: 50px;
+    padding: 30px;
+    background: #eee;
+    border-radius: 10px;
+}
+
+.no_collection_list p {
+    font-size: 16px;
+    margin-bottom: 10px;
+}
+
+/* 1:1 문의 */
+.guide_contact_wrap {
+    background: #009373;
+    text-align: center;
+    padding: 40px;
+    color: white;
+    margin-top: 50px;
+    border-radius: 10px;
+}
+
+.contact_btn {
+    background: white;
+    color: #009373;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}

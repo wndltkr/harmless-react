@@ -1,0 +1,70 @@
+.section4 {
+    padding: 50px 20px;
+    background-color: #f4f4f4;
+}
+
+.daegu_map {
+    position: relative;
+    text-align: center;
+}
+
+.daegu_map img {
+    max-width: 100%;
+    height: auto;
+}
+
+.daegu_map .pin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    animation: bounce 1.5s infinite;
+}
+
+.speech_bubble {
+    position: relative;
+    background-color: #009373;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    text-align: center;
+}
+
+.speech_bubble .text {
+    font-size: 1rem;
+}
+
+.speech_bubble img {
+    position: absolute;
+    top: -20px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 40px;
+    height: auto;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translate(-50%, -50%) scale(1);
+    }
+    50% {
+        transform: translate(-50%, -55%) scale(1.1);
+    }
+}
+
+.common_title {
+    margin-bottom: 20px;
+}
+
+.common_title .icon img {
+    width: 40px;
+    height: auto;
+    margin-bottom: 10px;
+}
+
+.common_title p {
+    font-size: 1.5rem;
+    line-height: 1.5;
+    color: #333;
+}

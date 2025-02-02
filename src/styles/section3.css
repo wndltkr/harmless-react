@@ -1,0 +1,81 @@
+.section3 {
+    padding: 50px 20px;
+    background-color: #f9f9f9;
+}
+
+.common_title {
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+.common_title .icon img {
+    width: 50px;
+    margin-bottom: 10px;
+}
+
+.common_title p {
+    font-size: 1.5rem;
+    color: #333;
+}
+
+.common_collection_wrap {
+    margin-top: 20px;
+    overflow: hidden;
+}
+
+/* 🔹 슬라이드 칸 크기 확장 + 간격 완전 제거 */
+.collection_item {
+    text-align: center;
+    border-radius: 20px; /* 더 둥글게 */
+    width: 280px; /* 기존보다 확대 */
+    height: 280px; /* 기존보다 확대 */
+    margin: 0px; /* 간격 완전 제거 */
+    padding: 0px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* 🔹 개별 배경색 적용 (파스텔 톤) */
+.collection_item:nth-child(1) { background-color: #EAF8E6; } /* 연한 녹색 */
+.collection_item:nth-child(2) { background-color: #FFE8F1; } /* 연한 핑크 */
+.collection_item:nth-child(3) { background-color: #DDEBFF; } /* 연한 블루 */
+.collection_item:nth-child(4) { background-color: #FDF5E6; } /* 연한 오렌지 */
+.collection_item:nth-child(5) { background-color: #E3F9F5; } /* 민트 */
+.collection_item:nth-child(6) { background-color: #FFE5E0; } /* 살구색 */
+.collection_item:nth-child(7) { background-color: #F8E8FF; } /* 연한 보라 */
+.collection_item:nth-child(8) { background-color: #EAEAEA; } /* 연한 회색 */
+.collection_item:nth-child(9) { background-color: #FFF9DB; } /* 연한 노랑 */
+.collection_item:nth-child(10) { background-color: #E5F2FF; } /* 스카이 블루 */
+
+/* 🔹 이미지 크기 키우기 */
+.collection_item .item_img {
+    width: 260px; /* 기존보다 확대 */
+    height: 260px; /* 기존보다 확대 */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.collection_item .item_img img {
+    width: 70%;
+    height: auto;
+    object-fit: contain;
+}
+
+/* 🔹 글자 스타일 */
+.collection_item .item_name {
+    margin-top: 5px;
+    font-size: 1.4rem; /* 기존보다 확대 */
+    font-weight: bold;
+    color: #333;
+}
+
+/* 🔹 Swiper 슬라이드 간격 완전 제거 */
+.swiper-wrapper {
+    display: flex;
+    gap: 0px !important; /* 간격 완전 제거 */
+    margin: 0px !important; /* 추가적으로 간격 제거 */
+    padding: 0px !important; /* 여백 완전 제거 */
+}

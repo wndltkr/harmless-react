@@ -1,0 +1,95 @@
+.header_wrap {
+    width: 100%;
+    background-color: #fff;
+    border-bottom: 1px solid #ddd;
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    padding: 10px 0;
+    display: flex;
+    justify-content: center;
+}
+
+.header {
+    width: 90%; /* 기존보다 줄임 */
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 30px; /* 오른쪽으로 이동 */
+}
+
+.header_content {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    padding-left: 300px; /* 오른쪽으로 이동 */
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    margin-left: 20px; /* 오른쪽으로 이동 */
+}
+
+.logo_img {
+    max-height: 60px; /* 크기 증가 */
+    margin-right: 10px;
+}
+
+.logo_text {
+    font-size: 20px;
+    color: #009373;
+    font-weight: bold;
+}
+
+.main_menu ul {
+    display: flex;
+    list-style: none;
+    margin: 0;
+    align-items: center;
+    justify-content: center;
+    padding-left: 200px; /* 오른쪽으로 이동 */
+}
+
+.main_menu ul li {
+    margin-right: 25px; /* 여백 조정 */
+    position: relative;
+}
+
+.main_menu ul li a {
+    text-decoration: none;
+    font-size: 16px;
+    color: #333;
+    padding: 5px 10px;
+    transition: color 0.3s ease, border-bottom 0.3s ease;
+}
+
+.main_menu ul li a:hover {
+    color: #009373;
+    border-bottom: 2px solid #009373;
+}
+
+.auth_menu {
+    display: flex;
+    align-items: center;
+    margin-left: 10px; /* 기존보다 줄임 */
+}
+
+.auth_menu a {
+    font-size: 16px;
+    color: #666;
+    text-decoration: none;
+    opacity: 0.8;
+    margin-left: 10px; /* 기존보다 줄임 */
+}
+
+.auth_menu .divider {
+    margin: 0 8px;
+    color: #ddd;
+}
+
+.auth_menu a:hover {
+    color: #009373;
+    opacity: 1;
+}
