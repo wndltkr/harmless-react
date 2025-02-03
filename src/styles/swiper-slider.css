@@ -1,48 +1,100 @@
-/* swiper-slider.css */
-
 /* Swiper Slider Styles */
 .slider_wrap {
+    display: flex;
+    flex-direction: column;
     position: relative;
     width: 100%;
     overflow: hidden;
+    margin-top: 50px; /* Swiper 자체를 살짝 내림 */
 }
 
+/* Swiper 기본 스타일 */
+.swiper-container {
+    padding-top: 20px; /* Swiper 내부 여백 */
+}
+
+/* 슬라이드 개별 스타일 */
 .slide {
-    height: 300px;
+    height: 700px; /* 기존 800px → 700px로 줄임 */
     background-size: cover;
     background-position: center;
-    position: relative;
-}
-
-.slider-content {
+    border-radius: 20px;
+    margin: 0 50px; /* 좌우 여백 조정 */
+    overflow: hidden;
     display: flex;
     justify-content: center;
     align-items: center;
+    position: relative;
+}
+
+/* 슬라이드 내용 (텍스트, 이미지) */
+.slider-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
     height: 100%;
+    width: 100%;
+    opacity: 0;
+    transition: opacity 1.5s ease-in-out, transform 1.5s ease-in-out;
 }
 
-.slider-content img {
-    max-width: 80%;
-    max-height: 80%;
+/* 위쪽 이미지 스타일 */
+.slide-image:first-child {
+    width: 30%; /* 크기 조절 */
+    max-width: 250px;
+    max-height: 200px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.2);
+    margin-bottom: 90px; /* 아래 이미지와 간격 */
 }
 
-/* Fade-in Animation */
-.animated {
-    animation-duration: 1.5s;
-    animation-fill-mode: both;
+/* 아래쪽 이미지 스타일 (더 크게 설정) */
+.slide-image:last-child {
+    width: 50%; /* 크기 증가 */
+    max-width: 400px;
+    max-height: 250px;
+    border-radius: 20px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
 }
 
-.fadeIn {
-    animation-name: fadeIn;
+/* 슬라이드 전환 시 텍스트 및 이미지 애니메이션 */
+.swiper-slide-active .slider-content {
+    opacity: 1;
+    transform: translateY(0);
+    animation: fadeInUp 1.8s ease-in-out;
 }
 
-@keyframes fadeIn {
+@keyframes fadeInUp {
     from {
         opacity: 0;
-        transform: scale(0.95);
+        transform: translateY(30px);
     }
     to {
         opacity: 1;
-        transform: scale(1);
+        transform: translateY(0);
     }
+}
+
+/* Swiper 네비게이션 화살표 숨기기 */
+.swiper-button-prev,
+.swiper-button-next {
+    display: none !important;
+}
+
+/* Swiper 페이지네이션 (밑에 있는 동그란 버튼들) */
+.swiper-pagination-bullet {
+    width: 20px; /* 크기 조절 */
+    height: 20px;
+    background: #ddd; /* 기본 색상 */
+    opacity: 0.7;
+    transition: background 0.3s, transform 0.3s;
+    margin: 0 6px; /* 버튼 간격 */
+}
+
+/* 선택된 (활성화된) 버튼 스타일 */
+.swiper-pagination-bullet-active {
+    background: #009373; /* 초록색으로 변경 */
+    transform: scale(1.3); /* 크기 커지게 */
+    opacity: 1;
 }

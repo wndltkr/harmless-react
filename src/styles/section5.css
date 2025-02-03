@@ -1,0 +1,61 @@
+.service-info-container {
+    width: 100%;
+    background-color: #fff;
+    padding: 50px 0;
+    text-align: center;
+}
+
+.service-info-content h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 40px;
+}
+
+.highlight {
+    color: #009373;
+    font-weight: bold;
+}
+
+.service-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    flex-wrap: wrap;
+}
+
+.service-item {
+    position: relative;
+    text-align: center;
+    max-width: 220px;
+}
+
+.speech-bubble {
+    width: 100%;
+    max-width: 220px;
+}
+
+.icon img {
+    width: 50px;
+    margin-top: -40px;
+}
+
+.service-item p {
+    font-size: 16px;
+    color: #333;
+    margin-top: 10px;
+}
+
+.button-container {
+    margin-top: 30px;
+}
+
+.apply-button {
+    display: inline-block;
+    background: #009373;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+}

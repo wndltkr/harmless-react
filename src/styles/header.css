@@ -1,3 +1,7 @@
+:root {
+    --header-height: 80px; /* 헤더 높이를 변수로 저장 */
+}
+
 .header_wrap {
     width: 100%;
     background-color: #fff;
@@ -8,6 +12,7 @@
     padding: 10px 0;
     display: flex;
     justify-content: center;
+    height: var(--header-height); /* 변수 적용 */
 }
 
 .header {

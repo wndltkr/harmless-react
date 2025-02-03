@@ -1,0 +1,89 @@
+.about-container {
+    width: 100%;
+    padding: 20px 0;
+    background-color: #f9f9f9;
+}
+
+.sub-top-banner {
+    text-align: center;
+    background: #009373;
+    padding: 20px;
+    color: white;
+}
+
+.underline {
+    width: 50px;
+    height: 2px;
+    background: white;
+    margin: 10px auto;
+}
+
+.content-wrapper {
+    max-width: 1200px;
+    margin: auto;
+}
+
+.common-about,
+.common-inconvenience,
+.about-apply,
+.about-service {
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+.about-image img {
+    max-width: 400px;
+    margin-top: 20px;
+}
+
+.inconvenience-list {
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.inconvenience-item {
+    background: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 250px;
+}
+
+.number {
+    font-size: 24px;
+    font-weight: bold;
+    color: #009373;
+}
+
+.apply-button {
+    display: inline-block;
+    background: #009373;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    margin-top: 20px;
+}
+
+.service-list {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.service-item {
+    text-align: center;
+    max-width: 200px;
+}
+
+.service-item img {
+    max-width: 100px;
+}
+
+.highlight {
+    color: #009373;
+    font-weight: bold;
+}

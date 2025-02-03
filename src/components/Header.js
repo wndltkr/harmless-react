@@ -7,7 +7,7 @@ const Header = () => {
             <div className="header">
                 <div className="header_content">
                     <h1 className="logo">
-                        <a href="https://harmless.co.kr/">
+                        <a href="/">
                             <img
                                 src="/files/attach/images/106/bea3593c0303b112cec149fe448e2365.png"
                                 alt="무해 로고"

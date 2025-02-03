@@ -1,13 +1,13 @@
 /* 페이지 전체 스타일 */
 .guide_page {
     font-family: "Noto Sans KR", sans-serif;
-    padding: 50px 20px;
+    padding: 20px 0;
 }
 
 /* 상단 배너 */
 .sub_top_banner {
     background: #009373;
-    padding: 40px;
+    padding: 30px;
     text-align: center;
     color: white;
 }

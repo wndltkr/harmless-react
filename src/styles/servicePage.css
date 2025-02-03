@@ -1,0 +1,94 @@
+.service-container {
+    width: 100%;
+    padding: 20px;
+    background-color: #f9f9f9;
+}
+
+.sub-top-banner {
+    background-color: #009373;
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}
+
+.banner-content {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.banner-line {
+    width: 50px;
+    height: 2px;
+    background-color: white;
+    margin: 10px auto;
+}
+
+.content-wrap {
+    padding: 40px 20px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.service-map-wrap {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 100%;
+}
+
+.service-area {
+    display: flex;
+    gap: 40px;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.daegu-map {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.daegu-map img {
+    max-width: 100%;
+    border-radius: 10px;
+}
+
+.map-info {
+    margin-top: 15px;
+    font-size: 18px;
+    color: #333;
+}
+
+.other-map {
+    text-align: center;
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+.map-list img {
+    width: 50px;
+}
+
+.region-list {
+    margin-top: 15px;
+    font-size: 16px;
+    color: #333;
+}
+
+.service-info {
+    font-size: 14px;
+    margin-top: 10px;
+    color: #666;
+}
+
+.service-note {
+    margin-top: 10px;
+    font-size: 14px;
+    color: #999;
+}

@@ -1,22 +1,8 @@
 import React from "react";
-import { Swiper, SwiperSlide } from "swiper/react";
-import { Autoplay } from "swiper/modules";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "../styles/guidePage.css"
-
-const collectionItems = [
-    { id: 1, imgSrc: "/files/attach/images/main/t-shirt.png", name: "티셔츠" },
-    { id: 2, imgSrc: "/files/attach/images/main/vest.png", name: "조끼" },
-    { id: 3, imgSrc: "/files/attach/images/main/jacket.png", name: "자켓" },
-    { id: 4, imgSrc: "/files/attach/images/main/padding.png", name: "패딩" },
-    { id: 5, imgSrc: "/files/attach/images/main/swimsuit.png", name: "수영복" },
-    { id: 6, imgSrc: "/files/attach/images/main/shoes.png", name: "구두" },
-    { id: 7, imgSrc: "/files/attach/images/main/slippers.png", name: "슬리퍼" },
-    { id: 8, imgSrc: "/files/attach/images/main/bag.png", name: "가방" },
-    { id: 9, imgSrc: "/files/attach/images/main/wallet.png", name: "지갑" },
-    { id: 10, imgSrc: "/files/attach/images/main/gloves.png", name: "장갑" },
-];
+import Section3 from "../components/Section3";
 
 const GuidePage = () => {
     return (
@@ -46,28 +32,7 @@ const GuidePage = () => {
             </div>
 
             {/* 수거 가능 품목 */}
-            <div className="guide_collection_wrap">
-                <h3 className="sub_title">수거 가능 품목</h3>
-                <Swiper
-                    modules={[Autoplay]}
-                    autoplay={{ delay: 3000, disableOnInteraction: false }}
-                    loop={true}
-                    speed={600}
-                    slidesPerView={4}
-                    spaceBetween={10}
-                >
-                    {collectionItems.map((item) => (
-                        <SwiperSlide key={item.id}>
-                            <div className="collection_item">
-                                <div className="item_img">
-                                    <img src={item.imgSrc} alt={item.name} />
-                                </div>
-                                <div className="item_name">{item.name}</div>
-                            </div>
-                        </SwiperSlide>
-                    ))}
-                </Swiper>
-            </div>
+            <Section3 />
 
             {/* 수거 불가능 품목 */}
             <div className="guide_no_collection_wrap">

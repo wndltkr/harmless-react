@@ -1,0 +1,44 @@
+.section6-container {
+    width: 100%;
+    background-color: #f9f9f9;
+    padding: 60px 0;
+    text-align: left;
+    display: flex;
+    justify-content: center;
+}
+
+.section6-content {
+    width: 80%;
+    max-width: 800px;
+}
+
+.section6-content h3 {
+    font-size: 24px;
+    font-weight: bold;
+    color: #333;
+    line-height: 1.5;
+}
+
+.highlight {
+    color: #009373;
+    font-weight: bold;
+}
+
+.button-container {
+    margin-top: 30px;
+}
+
+.apply-button {
+    display: inline-block;
+    background: #009373;
+    color: white;
+    padding: 12px 24px;
+    border-radius: 5px;
+    text-decoration: none;
+    font-weight: bold;
+    transition: background 0.3s ease;
+}
+
+.apply-button:hover {
+    background: #007a5e;
+}
