@@ -1,19 +1,21 @@
 .section6-container {
     width: 100%;
-    background-color: #f9f9f9;
-    padding: 60px 0;
-    text-align: left;
+    /* 배경 관련 속성은 컴포넌트에서 인라인으로 적용 */
     display: flex;
-    justify-content: center;
+    align-items: flex-end;        /* 수직 하단 정렬 */
+    justify-content: flex-start;  /* 수평 왼쪽 정렬 */
+    height: 700px;
 }
 
 .section6-content {
     width: 80%;
     max-width: 800px;
+    transform: translateY(-110px); /* 콘텐츠를 약간 위쪽으로 이동 */
+    padding-right: 400px;
 }
 
 .section6-content h3 {
-    font-size: 24px;
+    font-size: 55px; /* 글자 크기 확대 */
     font-weight: bold;
     color: #333;
     line-height: 1.5;
@@ -36,6 +38,7 @@
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
+    font-size: 37px; /* 글자 크기 확대 */
     transition: background 0.3s ease;
 }
 

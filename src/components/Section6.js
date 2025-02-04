@@ -2,8 +2,17 @@ import React from "react";
 import "../styles/section6.css";
 
 const Section6 = () => {
+    const containerStyle = {
+        background: `url(${process.env.PUBLIC_URL}/files/attach/images/sub/about_img.jpg) no-repeat center center`,
+        backgroundSize: "cover",
+        padding: "60px 0",
+        textAlign: "left",
+        display: "flex",
+        justifyContent: "center"
+    };
+
     return (
-        <div className="section6-container">
+        <div className="section6-container" style={containerStyle}>
             <div className="section6-content">
                 <h3>
                     저희 무해는 <br />

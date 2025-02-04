@@ -19,7 +19,6 @@
 }
 
 .content-wrapper {
-    max-width: 1200px;
     margin: auto;
 }
 
@@ -87,3 +86,4 @@
     color: #009373;
     font-weight: bold;
 }
+

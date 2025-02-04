@@ -1,85 +1,92 @@
-.apply-container {
+/* 전체 페이지 컨테이너 */
+.applyPageContainer {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-.sub-top-banner {
-    background-color: #009373;
-    padding: 40px 0;
+/* 상단 배너 */
+.applyBanner {
+    width: 100%;
     text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     color: white;
+    margin-bottom: 40px;
 }
 
-.banner-title {
-    font-size: 24px;
+.applyBannerContent {
+    text-align: center;
+}
+
+.applyBannerTitle {
+    font-size: 36px;
     font-weight: bold;
+    margin: 0;
 }
 
-.underline {
+.applyUnderline {
     width: 50px;
     height: 3px;
     background-color: white;
     margin: 10px auto;
 }
 
-.apply-content {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-    padding: 40px 0;
-}
-
-.apply-choice {
+/* 신청 옵션 컨테이너 */
+.applyOptionsContainer {
     display: flex;
     justify-content: space-around;
-    width: 100%;
+    align-items: flex-start;
+    flex-wrap: wrap;
+    gap: 20px;
 }
 
-.apply-box {
+/* 각 신청 옵션 박스 */
+.applyOptionBox {
     width: 45%;
-    background: #f9f9f9;
     padding: 20px;
-    border-radius: 10px;
     text-align: center;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.1);
 }
 
-.apply-title {
-    font-size: 20px;
+/* 옵션 제목 */
+.applyOptionTitle {
+    font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-.apply-desc {
-    font-size: 14px;
+/* 옵션 설명 */
+.applyOptionDesc {
+    font-size: 16px;
     color: #555;
     margin-bottom: 20px;
 }
 
-.recommendation {
+/* 추천 안내 영역 */
+.applyOptionRecommendation {
     text-align: left;
     margin-bottom: 20px;
 }
 
-.recommend-title {
-    font-size: 16px;
+.applyOptionRecTitle {
+    font-size: 18px;
     font-weight: bold;
     margin-bottom: 10px;
 }
 
-.apply-btn {
+/* 신청 버튼 */
+.applyOptionBtn {
     display: inline-block;
     background: #009373;
     color: white;
     padding: 10px 20px;
     border-radius: 5px;
     text-decoration: none;
-    font-size: 14px;
+    font-size: 16px;
     transition: background 0.3s ease;
 }
 
-.apply-btn:hover {
+.applyOptionBtn:hover {
     background: #007a5e;
 }

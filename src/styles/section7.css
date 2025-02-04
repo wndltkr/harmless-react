@@ -1,0 +1,113 @@
+.section7 {
+    position: relative; /* ✅ 배경 로고 위치 조정 */
+    padding: 120px 20px;
+    background-color: #009373; /* ✅ 초록색 배경 */
+    text-align: center;
+    overflow: hidden;
+}
+
+/* ✅ 배경 로고 (오른쪽 상단) */
+.section7_bg_logo {
+    position: absolute;
+    top: 20px;
+    right: -50px;
+    width: 500px;
+    z-index: 0; /* ✅ 뒤쪽 배경처럼 보이도록 */
+}
+
+.section7_bg_logo img {
+    width: 100%;
+    height: auto;
+}
+
+/* ✅ 컨테이너 */
+.section7_container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1; /* ✅ 배경 로고보다 위에 배치 */
+}
+
+/* ✅ 지도 아이콘 */
+.section7_icon img {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+/* ✅ 제목 스타일 */
+.section7_title {
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+/* ✅ "무해" 강조 스타일 (연두색) */
+.section7_highlight {
+    color: #cddc39; /* ✅ 연두색 */
+    font-size: 2.8rem;
+    background-color: rgba(205, 220, 57, 0.2);
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+/* ✅ 수거 신청 버튼 */
+.section7_btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: white;
+    color: #009373;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 30px;
+}
+
+.section7_btn:hover {
+    background-color: #007a5b;
+    color: white;
+}
+
+/* ✅ 운영시간 & 휴무일 */
+.section7_info {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+/* ✅ 카드 스타일 */
+.section7_card {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+/* ✅ 아이콘 */
+.section7_card_icon {
+    font-size: 2rem;
+    color: white;
+    margin-right: 15px;
+}
+
+/* ✅ 텍스트 스타일 */
+.section7_card_text span {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+}
+
+.section7_card_text p {
+    font-size: 1.1rem;
+    color: white;
+    margin: 5px 0 0;
+}

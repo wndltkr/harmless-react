@@ -18,16 +18,21 @@ const Section5 = () => {
                 <div className="service-list">
                     {serviceItems.map((item, index) => (
                         <div key={index} className="service-item">
-                            <img src="/files/attach/images/sub/about_service.png" alt="speech_bubble" className="speech-bubble" />
-                            <div className="icon">
-                                <img src={item.icon} alt="icon" />
+                            <div className="bubble-container">
+                                <img
+                                    src="/files/attach/images/sub/about_service.png"
+                                    alt="service bubble"
+                                    className="my-new-bubble"
+                                />
+                                <div className="bubble-text">{item.text}</div>
                             </div>
-                            <p>{item.text}</p>
                         </div>
                     ))}
                 </div>
                 <div className="button-container">
-                    <a href="/guide" className="apply-button">이용안내 바로가기</a>
+                    <a href="/guide" className="apply-button">
+                        이용안내 바로가기
+                    </a>
                 </div>
             </div>
         </div>
