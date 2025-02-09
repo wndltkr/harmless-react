@@ -1,23 +1,27 @@
-/* 페이지 전체 스타일 */
-.guide_page {
+.guidePageContainer {
     font-family: "Noto Sans KR", sans-serif;
     padding: 20px 0;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 /* 상단 배너 */
-.sub_top_banner {
-    background: #009373;
-    padding: 30px;
-    text-align: center;
-    color: white;
+.guideBanner {
+    /* 배너의 배경, 높이 등은 인라인 스타일로 처리됨 */
+    margin-bottom: 40px;
 }
 
-.sub_top_banner .title {
+.guideBannerContent {
+    text-align: center;
+}
+
+.guideBannerTitle {
     font-size: 28px;
     font-weight: bold;
+    margin: 0;
 }
 
-.hr-line {
+.guideBannerUnderline {
     width: 50px;
     height: 3px;
     background: white;
@@ -25,69 +29,67 @@
 }
 
 /* 매입 단가 섹션 */
-.guide_price_wrap {
+.guidePriceWrap {
     text-align: center;
     margin-top: 40px;
 }
 
-.sub_title {
-    font-size: 24px;
+/* 매입 단가 소제목: 글자 크기 증가 */
+.guideSubTitle {
+    font-size: 48px;       /* 기존 24px보다 크게 */
     font-weight: bold;
     margin-bottom: 20px;
 }
 
-.price_list {
+.priceList {
     display: flex;
     justify-content: center;
     gap: 20px;
 }
 
-.price_item {
-    background: #f5f5f5;
-    padding: 15px 20px;
+/* 가격 항목 영역: 크기, 패딩, 글자 크기 증가, 배경 흰색 */
+.priceItem {
+    background: #ffffff;
+    padding: 25px 35px;           /* 좌우 패딩 35px */
     border-radius: 10px;
-    width: 250px;
-}
-
-.price_title {
+    width: 550px;                 /* 전체 영역 너비 */
     font-size: 18px;
+    border: 1px solid #ccc;
+}
+
+/* 가격 제목: 초록색 배경, 흰색 글자, 패딩 및 둥근 모서리 적용 */
+.priceTitle {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: calc(100% + 70px);  /* 부모 내부 콘텐츠 너비 + 좌우 패딩(35px*2) */
+    margin: -25px -35px 10px -35px;  /* 상단 마진을 -25px로 설정하여 부모 상단 패딩만큼 올림 */
+    padding: 5px;
+    background: #009373;
+    color: #ffffff;
+    font-size: 20px;
     font-weight: bold;
-    margin-bottom: 10px;
-}
-
-/* 수거 가능 품목 */
-.guide_collection_wrap {
-    margin-top: 50px;
-    text-align: center;
-}
-
-.collection_item {
-    background: #f5f5f5;
-    padding: 15px;
-    border-radius: 10px;
-    text-align: center;
-}
-
-.item_img img {
-    width: 100px;
-    height: auto;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    box-sizing: border-box;
+    height: 60px;
 }
 
 /* 수거 불가능 품목 */
-.guide_no_collection_wrap {
+.guideNoCollectionWrap {
     margin-top: 50px;
     padding: 30px;
     background: #eee;
     border-radius: 10px;
 }
 
-.no_collection_list p {
+.noCollectionList p {
     font-size: 16px;
     margin-bottom: 10px;
 }
 
 /* 1:1 문의 */
-.guide_contact_wrap {
+.guideContactWrap {
     background: #009373;
     text-align: center;
     padding: 40px;
@@ -96,7 +98,7 @@
     border-radius: 10px;
 }
 
-.contact_btn {
+.contactBtn {
     background: white;
     color: #009373;
     padding: 10px 20px;
