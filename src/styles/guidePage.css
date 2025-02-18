@@ -1,6 +1,7 @@
+/* 전체 컨테이너 */
 .guidePageContainer {
     font-family: "Noto Sans KR", sans-serif;
-    padding: 20px 0;
+    padding: 20px 0 0 0; /* 상단은 20px, 하단은 0px */
     max-width: 1200px;
     margin: 0 auto;
 }
@@ -34,11 +35,12 @@
     margin-top: 40px;
 }
 
-/* 매입 단가 소제목: 글자 크기 증가 */
+/* 매입 단가 소제목: 글자 크기 증가 및 중앙 정렬 */
 .guideSubTitle {
-    font-size: 48px;       /* 기존 24px보다 크게 */
+    font-size: 48px;
     font-weight: bold;
     margin-bottom: 20px;
+    text-align: center;
 }
 
 .priceList {
@@ -47,23 +49,23 @@
     gap: 20px;
 }
 
-/* 가격 항목 영역: 크기, 패딩, 글자 크기 증가, 배경 흰색 */
+/* 가격 항목 영역 */
 .priceItem {
     background: #ffffff;
-    padding: 25px 35px;           /* 좌우 패딩 35px */
+    padding: 25px 35px;
     border-radius: 10px;
-    width: 550px;                 /* 전체 영역 너비 */
+    width: 550px;
     font-size: 18px;
     border: 1px solid #ccc;
 }
 
-/* 가격 제목: 초록색 배경, 흰색 글자, 패딩 및 둥근 모서리 적용 */
+/* 가격 제목 */
 .priceTitle {
     display: flex;
     align-items: center;
     justify-content: center;
-    width: calc(100% + 70px);  /* 부모 내부 콘텐츠 너비 + 좌우 패딩(35px*2) */
-    margin: -25px -35px 10px -35px;  /* 상단 마진을 -25px로 설정하여 부모 상단 패딩만큼 올림 */
+    width: calc(100% + 70px);
+    margin: -25px -35px 10px -35px;
     padding: 5px;
     background: #009373;
     color: #ffffff;
@@ -81,28 +83,131 @@
     padding: 30px;
     background: #eee;
     border-radius: 10px;
+    position: relative;
+    /* 가로 전체 확장 */
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
 }
 
-.noCollectionList p {
+/* 위아래로 움직이는 아이콘 (크기 확대) */
+.moving-icon {
+    display: block;
+    margin: 0 auto 10px auto;
+    width: 80px;
+    animation: moveUpDown 2s infinite;
+}
+
+@keyframes moveUpDown {
+    0%, 100% { transform: translateY(0); }
+    50% { transform: translateY(-10px); }
+}
+
+/* noCollectionList: 내부 여백만 적용 */
+.noCollectionList {
+    padding: 20px;
+}
+
+/* 각 항목을 개별 박스로 분리 */
+.noCollectionItem {
+    background: #fff;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    margin-bottom: 15px;
+    padding: 15px;
+}
+
+/* 제목과 설명 사이의 얇은 구분선 */
+.noCollectionDivider {
+    width: 100%;
+    height: 1px;
+    background: #ccc;
+    margin: 5px 0;
+}
+
+/* 항목 제목 */
+.noCollectionTitle {
+    display: block;
+    font-size: 18px;
+    font-weight: bold;
+    margin-bottom: 5px;
+}
+
+/* 항목 설명 */
+.noCollectionDesc {
     font-size: 16px;
-    margin-bottom: 10px;
+    color: #333;
 }
 
 /* 1:1 문의 */
 .guideContactWrap {
     background: #009373;
     text-align: center;
-    padding: 40px;
+    padding: 60px;
     color: white;
-    margin-top: 50px;
+    /* 위쪽과 아래쪽 간격 제거 */
+    margin-top: 0;
+    margin-bottom: 0;
     border-radius: 10px;
+    position: relative;
+    width: 100vw;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    font-size: 28px;
 }
 
+.guideContactWrap h3 {
+    font-size: 32px;
+    margin-bottom: 20px;
+}
+
+.guideContactWrap p {
+    font-size: 28px;
+    margin-bottom: 20px;
+}
+
+/* 버튼과 텍스트 사이 간격 추가 */
 .contactBtn {
+    display: inline-block; /* 또는 block */
     background: white;
     color: #009373;
-    padding: 10px 20px;
+    padding: 12px 24px;
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
+    font-size: 32px;
+    margin-top: 30px; /* 텍스트와 버튼 사이 간격 추가 */
+}
+
+/* 외부 컨테이너 마진 제거 (mt-30, mb-10 오버라이드) */
+.guide_check_wrap,
+.mt-30,
+.mb-10 {
+    margin: 1px !important;
+    padding: 1px !important;
+}
+
+/* guide-check-box: 연한 연두색 배경과 간격 조정 */
+.guide-check-box {
+    display: flex;
+    background-color: #e8f5e9;
+    padding: 20px;
+    border-radius: 8px;
+    align-items: center;
+    margin: 5px 0;
+}
+
+/* guide-text-large: 글자 크기 20px, 굵게 */
+.guide-text-large {
+    font-size: 20px;
+    font-weight: bold;
+}
+
+/* guide-highlight: 텍스트 색상 #009373 */
+.guide-highlight {
+    color: #009373;
 }
