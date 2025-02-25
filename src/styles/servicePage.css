@@ -1,3 +1,4 @@
+/* servicePage.css */
 .service-container {
     width: 100%;
     padding: 20px;
@@ -91,4 +92,22 @@
     margin-top: 10px;
     font-size: 14px;
     color: #999;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    .content-wrap {
+        padding: 20px 10px;
+    }
+    .service-area {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .daegu-map, .other-map {
+        width: 100%;
+        padding: 10px;
+    }
+    .map-info, .region-list {
+        font-size: 14px;
+    }
 }

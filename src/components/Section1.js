@@ -19,7 +19,7 @@ const Section1 = () => {
                             {/* 텍스트 블록 2 */}
                             <div className="fade-in-up" data-anim-delay="0">
                                 <p className="description-text">
-                                    이러한 환경 문제 속, 저희는 <span className="bold-text">고민하고 답을 찾아 나아 갑니다.</span>
+                                    이러한 환경 문제 속,<br className="mobile-break" /> 저희는 <span className="bold-text">고민하고 답을 찾아 나아 갑니다.</span>
                                 </p>
                                 <p className="underline-effect">
                                     <b>슬로우, 미니멀 라이프를 지향하는 <span className="highlight-text">무해</span></b>

@@ -1,6 +1,7 @@
+/* section1.css */
 .section1 {
     position: relative;
-    padding: 150px 20px; /* 상하 패딩 확대 */
+    padding: 150px 20px;
     background-color: #f9f9f9;
     overflow: hidden;
 }
@@ -14,7 +15,6 @@
     color: #333;
 }
 
-/* 텍스트 스타일 */
 .intro-text {
     font-size: 2rem;
     color: #555;
@@ -28,9 +28,8 @@
     margin-top: 15px;
 }
 
-/* "패스트 패션" 아래 간격 추가 */
 .spacer-lg {
-    height: 50px; /* 기존보다 더 넓은 간격 추가 */
+    height: 50px;
 }
 
 .description-text {
@@ -46,7 +45,6 @@
     color: #111;
 }
 
-/* 밑줄 강조 효과 */
 .underline-effect {
     position: relative;
     display: inline-block;
@@ -66,24 +64,20 @@
     border-radius: 6px;
 }
 
-/* 강조된 텍스트 색상 */
 .highlight-text {
     color: #009373;
     font-weight: bold;
 }
 
-/* 이미지 컨테이너 (아래쪽으로 이동) */
 .image-container {
-    margin-top: 80px; /* 더 아래로 이동 */
+    margin-top: 80px;
 }
 
-/* HARMLESS 로고 */
 .harmless_img img {
     max-width: 70%;
     margin: 0 auto;
 }
 
-/* 원형 애니메이션 */
 .circle1, .circle2, .circle3 {
     position: absolute;
 }
@@ -104,7 +98,6 @@
     transform: translate(-50%, -50%);
 }
 
-/* 페이드 인 효과 */
 .fade-in-up {
     animation: fadeInUp 1.5s ease-in-out;
 }
@@ -117,5 +110,37 @@
     to {
         opacity: 1;
         transform: translateY(0);
+    }
+}
+
+.mobile-break {
+    display: none;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    .section1 {
+        padding: 50px 10px;
+    }
+    .intro-text {
+        font-size: 1rem;
+    }
+    .highlight-title {
+        font-size: 2.5rem;
+    }
+    .description-text {
+        font-size: 1rem;
+    }
+    .underline-effect {
+        font-size: 1rem;
+    }
+    .mobile-break {
+        display: block;
+    }
+
+    .circle1 img,
+    .circle2 img,
+    .circle3 img {
+        max-width: 150px !important;
     }
 }

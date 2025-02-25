@@ -1,14 +1,12 @@
-/* 전체 컨테이너 */
+/* guidePage.css */
 .guidePageContainer {
     font-family: "Noto Sans KR", sans-serif;
-    padding: 20px 0 0 0; /* 상단은 20px, 하단은 0px */
+    padding: 20px 0 0 0;
     max-width: 1200px;
     margin: 0 auto;
 }
 
-/* 상단 배너 */
 .guideBanner {
-    /* 배너의 배경, 높이 등은 인라인 스타일로 처리됨 */
     margin-bottom: 40px;
 }
 
@@ -29,13 +27,11 @@
     margin: 10px auto;
 }
 
-/* 매입 단가 섹션 */
 .guidePriceWrap {
     text-align: center;
     margin-top: 40px;
 }
 
-/* 매입 단가 소제목: 글자 크기 증가 및 중앙 정렬 */
 .guideSubTitle {
     font-size: 48px;
     font-weight: bold;
@@ -49,7 +45,6 @@
     gap: 20px;
 }
 
-/* 가격 항목 영역 */
 .priceItem {
     background: #ffffff;
     padding: 25px 35px;
@@ -59,7 +54,6 @@
     border: 1px solid #ccc;
 }
 
-/* 가격 제목 */
 .priceTitle {
     display: flex;
     align-items: center;
@@ -77,14 +71,12 @@
     height: 60px;
 }
 
-/* 수거 불가능 품목 */
 .guideNoCollectionWrap {
     margin-top: 50px;
     padding: 30px;
     background: #eee;
     border-radius: 10px;
     position: relative;
-    /* 가로 전체 확장 */
     width: 100vw;
     left: 50%;
     right: 50%;
@@ -92,7 +84,6 @@
     margin-right: -50vw;
 }
 
-/* 위아래로 움직이는 아이콘 (크기 확대) */
 .moving-icon {
     display: block;
     margin: 0 auto 10px auto;
@@ -105,12 +96,10 @@
     50% { transform: translateY(-10px); }
 }
 
-/* noCollectionList: 내부 여백만 적용 */
 .noCollectionList {
     padding: 20px;
 }
 
-/* 각 항목을 개별 박스로 분리 */
 .noCollectionItem {
     background: #fff;
     border: 1px solid #ccc;
@@ -119,7 +108,6 @@
     padding: 15px;
 }
 
-/* 제목과 설명 사이의 얇은 구분선 */
 .noCollectionDivider {
     width: 100%;
     height: 1px;
@@ -127,7 +115,6 @@
     margin: 5px 0;
 }
 
-/* 항목 제목 */
 .noCollectionTitle {
     display: block;
     font-size: 18px;
@@ -135,19 +122,16 @@
     margin-bottom: 5px;
 }
 
-/* 항목 설명 */
 .noCollectionDesc {
     font-size: 16px;
     color: #333;
 }
 
-/* 1:1 문의 */
 .guideContactWrap {
     background: #009373;
     text-align: center;
     padding: 60px;
     color: white;
-    /* 위쪽과 아래쪽 간격 제거 */
     margin-top: 0;
     margin-bottom: 0;
     border-radius: 10px;
@@ -170,9 +154,8 @@
     margin-bottom: 20px;
 }
 
-/* 버튼과 텍스트 사이 간격 추가 */
 .contactBtn {
-    display: inline-block; /* 또는 block */
+    display: inline-block;
     background: white;
     color: #009373;
     padding: 12px 24px;
@@ -180,10 +163,9 @@
     text-decoration: none;
     font-weight: bold;
     font-size: 32px;
-    margin-top: 30px; /* 텍스트와 버튼 사이 간격 추가 */
+    margin-top: 30px;
 }
 
-/* 외부 컨테이너 마진 제거 (mt-30, mb-10 오버라이드) */
 .guide_check_wrap,
 .mt-30,
 .mb-10 {
@@ -191,7 +173,6 @@
     padding: 1px !important;
 }
 
-/* guide-check-box: 연한 연두색 배경과 간격 조정 */
 .guide-check-box {
     display: flex;
     background-color: #e8f5e9;
@@ -201,13 +182,32 @@
     margin: 5px 0;
 }
 
-/* guide-text-large: 글자 크기 20px, 굵게 */
 .guide-text-large {
     font-size: 20px;
     font-weight: bold;
 }
 
-/* guide-highlight: 텍스트 색상 #009373 */
 .guide-highlight {
     color: #009373;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    .guidePageContainer {
+        padding: 10px;
+    }
+    .guideBannerTitle {
+        font-size: 24px;
+    }
+    .priceItem {
+        width: 100%;
+        padding: 15px;
+    }
+    .guideSubTitle {
+        font-size: 32px;
+    }
+    .guideContactWrap {
+        padding: 30px;
+        font-size: 20px;
+    }
 }

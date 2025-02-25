@@ -1,3 +1,4 @@
+/* section4.css */
 .section4 {
     padding: 80px 20px;
     background-color: #f8fdf8;
@@ -6,30 +7,26 @@
     align-items: center;
 }
 
-/* ✅ Section4 내부 컨테이너를 가로 정렬 (지도 왼쪽, 텍스트 오른쪽) */
 .section4 .section4_container {
     display: flex;
-    flex-direction: row; /* 좌우 정렬 */
+    flex-direction: row;
     align-items: center;
     justify-content: center;
-    gap: 50px; /* 지도와 텍스트 사이 간격 */
-    flex-wrap: wrap; /* 반응형 대응 */
+    gap: 50px;
+    flex-wrap: wrap;
 }
 
-/* ✅ 지도 컨테이너 (왼쪽 배치) */
 .section4 .section4_daegu_map {
     position: relative;
     text-align: center;
     max-width: 420px;
 }
 
-/* ✅ 지도 크기 */
 .section4 .section4_daegu_map img {
     width: 100%;
     height: auto;
 }
 
-/* ✅ 핀 위치 조정 */
 .section4 .section4_daegu_map .section4_pin {
     position: absolute;
     top: 55%;
@@ -38,7 +35,6 @@
     animation: bounce 1.5s infinite;
 }
 
-/* ✅ 텍스트 컨테이너 (오른쪽 배치) */
 .section4 .section4_text_container {
     display: flex;
     flex-direction: column;
@@ -48,7 +44,6 @@
     max-width: 550px;
 }
 
-/* ✅ 아이콘을 텍스트 위로 배치 */
 .section4 .section4_title {
     margin-bottom: 20px;
     display: flex;
@@ -56,13 +51,11 @@
     align-items: flex-start;
 }
 
-/* ✅ 지도 아이콘 크기 */
 .section4 .section4_title .section4_icon {
     width: 60px;
     margin-bottom: 15px;
 }
 
-/* ✅ 방문 수거 텍스트 */
 .section4 .section4_title p {
     font-size: 2.4rem;
     color: #333;
@@ -70,7 +63,6 @@
     line-height: 1.6;
 }
 
-/* ✅ "서비스 준비중" 강조 */
 .section4 .section4_line_effect {
     font-size: 2.6rem;
     font-weight: bold;
@@ -81,7 +73,6 @@
     display: inline-block;
 }
 
-/* ✅ 말풍선 스타일 */
 .section4 .section4_speech_bubble {
     background-color: #009373;
     color: white;
@@ -95,7 +86,6 @@
     position: relative;
 }
 
-/* ✅ 말풍선 아이콘 */
 .section4 .section4_speech_bubble img {
     position: absolute;
     top: -20px;
@@ -105,12 +95,22 @@
     height: auto;
 }
 
-/* ✅ 핀 애니메이션 */
 @keyframes bounce {
     0%, 100% {
         transform: translate(-50%, -50%) scale(1);
     }
     50% {
         transform: translate(-50%, -55%) scale(1.1);
+    }
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    .section4 .section4_container {
+        flex-direction: column;
+        gap: 20px;
+    }
+    .section4 .section4_text_container {
+        max-width: 100%;
     }
 }

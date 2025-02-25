@@ -1,12 +1,12 @@
+/* section3.css */
 .section3 {
-    padding: 150px 20px; /* 🔹 전체적으로 아래로 이동 */
-    background-color: transparent; /* 🔹 배경색 제거 */
+    padding: 150px 20px;
+    background-color: transparent;
 }
 
-/* 공통 타이틀 스타일 */
 .common_title {
     text-align: center;
-    margin-bottom: 50px; /* 🔹 여백 증가 */
+    margin-bottom: 50px;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -14,55 +14,49 @@
     position: relative;
 }
 
-/* 아이콘 크기 및 위치 조정 */
 .common_title .icon {
     position: relative;
     display: flex;
     align-items: center;
     justify-content: center;
-    margin-left: 100px; /* 🔹 아이콘을 아주 조금 오른쪽으로 이동 */
+    margin-left: 100px;
 }
 
 .common_title .icon img {
-    width: 80px; /* 🔹 기존보다 확대 */
+    width: 80px;
 }
 
-/* 질문 텍스트 크기 증가 */
 .common_title p {
-    font-size: 2.2rem; /* 🔹 기존보다 확대 */
+    font-size: 2.2rem;
     color: #333;
     font-weight: bold;
     line-height: 1.4;
     text-align: center;
 }
 
-/* "의류, 신발, 잡화, 침구류 등" 강조 */
 .common_title .line_effect {
-    font-size: 2.4rem; /* 🔹 강조 부분 더 크게 */
-    color: #009373; /* 초록색 강조 */
+    font-size: 2.4rem;
+    color: #009373;
 }
 
-/* 컬렉션 아이템 슬라이더 스타일 */
 .common_collection_wrap {
-    margin-top: 40px; /* 🔹 전체적으로 아래로 이동 */
+    margin-top: 40px;
     overflow: hidden;
 }
 
-/* 🔹 슬라이드 칸 크기 확장 + 간격 완전 제거 */
 .collection_item {
     text-align: center;
     border-radius: 20px;
     width: 280px;
     height: 280px;
-    margin: 0px;
-    padding: 0px;
+    margin: 0;
+    padding: 0;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
 }
 
-/* 🔹 이미지 크기 키우기 */
 .collection_item .item_img {
     width: 260px;
     height: 260px;
@@ -77,7 +71,6 @@
     object-fit: contain;
 }
 
-/* 🔹 글자 스타일 */
 .collection_item .item_name {
     margin-top: 5px;
     font-size: 1.6rem;
@@ -85,10 +78,27 @@
     color: #333;
 }
 
-/* Swiper 슬라이드 간격 완전 제거 */
 .swiper-wrapper {
     display: flex;
     gap: 0px !important;
     margin: 0px !important;
     padding: 0px !important;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    .section3 {
+        padding: 50px 10px;
+    }
+    .common_title p {
+        font-size: 1.8rem;
+    }
+    .collection_item {
+        width: 200px;
+        height: 200px;
+    }
+    .collection_item .item_img {
+        width: 180px;
+        height: 180px;
+    }
 }

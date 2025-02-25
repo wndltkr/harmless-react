@@ -1,21 +1,21 @@
+/* section6.css */
 .section6-container {
     width: 100%;
-    /* 배경 관련 속성은 컴포넌트에서 인라인으로 적용 */
     display: flex;
-    align-items: flex-end;        /* 수직 하단 정렬 */
-    justify-content: flex-start;  /* 수평 왼쪽 정렬 */
+    align-items: flex-end;
+    justify-content: flex-start;
     height: 700px;
 }
 
 .section6-content {
     width: 80%;
     max-width: 800px;
-    transform: translateY(-110px); /* 콘텐츠를 약간 위쪽으로 이동 */
+    transform: translateY(-110px);
     padding-right: 400px;
 }
 
 .section6-content h3 {
-    font-size: 55px; /* 글자 크기 확대 */
+    font-size: 55px;
     font-weight: bold;
     color: #333;
     line-height: 1.5;
@@ -38,10 +38,30 @@
     border-radius: 5px;
     text-decoration: none;
     font-weight: bold;
-    font-size: 37px; /* 글자 크기 확대 */
+    font-size: 37px;
     transition: background 0.3s ease;
 }
 
 .apply-button:hover {
     background: #007a5e;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    .section6-container {
+        height: auto;
+        padding: 20px;
+    }
+    .section6-content {
+        width: 100%;
+        padding-right: 20px;
+        transform: translateY(0);
+    }
+    .section6-content h3 {
+        font-size: 32px;
+    }
+    .apply-button {
+        font-size: 24px;
+        padding: 10px 20px;
+    }
 }

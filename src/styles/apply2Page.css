@@ -1,3 +1,4 @@
+/* apply2Page.css */
 .apply2-container {
     width: 100%;
     max-width: 600px;
@@ -87,4 +88,15 @@
 
 .submit-btn:hover {
     background-color: #007a5e;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    .apply2-container {
+        margin: 20px auto;
+        padding: 20px;
+    }
+    .apply2-header h2 {
+        font-size: 20px;
+    }
 }

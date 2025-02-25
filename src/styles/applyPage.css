@@ -1,11 +1,10 @@
-/* 전체 페이지 컨테이너 (변경 없음) */
+/* applyPage.css */
 .applyPageContainer {
     max-width: 1200px;
     margin: 0 auto;
     padding: 20px;
 }
 
-/* 상단 배너 (기존 스타일 유지) */
 .applyBanner {
     width: 100%;
     text-align: center;
@@ -33,7 +32,6 @@
     margin: 10px auto;
 }
 
-/* 신청 옵션 컨테이너 (변경 없음) */
 .applyOptionsContainer {
     display: flex;
     justify-content: space-around;
@@ -42,59 +40,51 @@
     gap: 20px;
 }
 
-/* 신청 옵션 박스 (기존 스타일 유지) */
 .applyOptionBox {
     width: 45%;
     padding: 20px;
     text-align: center;
     margin: 20px 0;
-    /* 배경 이미지는 인라인 스타일로 적용됨 */
 }
 
-/* 옵션 제목 - 글자 크기 증가 및 초록색 적용 */
 .applyOptionTitle {
-    font-size: 40px; /* 기존 32px에서 증가 */
+    font-size: 40px;
     font-weight: bold;
     color: #009373;
     margin-bottom: 20px;
 }
 
-/* 새 설명 섹션 (배경 흰색 적용) */
 .applyOptionSection {
     background: white;
     padding: 20px;
     margin-bottom: 20px;
     border-radius: 10px;
-    text-align: left; /* 내부 텍스트 왼쪽 정렬 */
+    text-align: left;
 }
 
-/* 부제목: '대면 수거란?' 또는 '비대면 수거란?' */
 .applyOptionSectionTitle {
     font-size: 24px;
     font-weight: bold;
     margin-bottom: 10px;
-    border-bottom: 1px solid #ccc; /* 얇은 줄 추가 */
+    border-bottom: 1px solid #ccc;
     padding-bottom: 5px;
 }
 
-/* 옵션 설명 텍스트 (글자 크기 증가) */
 .applyOptionDesc {
     font-size: 18px;
     color: #555;
     margin-bottom: 20px;
-    line-height: 1.8;  /* 줄 간격 증가 */
+    line-height: 1.8;
 }
 
-/* 추천 안내 영역 */
 .applyOptionRecommendation {
-    background: white;               /* 배경 흰색 */
+    background: white;
     margin-bottom: 20px;
     text-align: left;
-    border-radius: 10px;             /* 모서리 둥글게 */
-    padding: 10px;                   /* 내부 여백 */
+    border-radius: 10px;
+    padding: 10px;
 }
 
-/* 추천 제목를 초록색 배경의 칸으로 표시 */
 .applyOptionRecWrapper {
     display: flex;
     align-items: center;
@@ -110,22 +100,21 @@
     border-radius: 5px;
     font-size: 20px;
     font-weight: bold;
-    text-align: center;              /* 중앙 정렬 */
-    width: 100%;                     /* 부모의 너비에 맞춤 */
+    text-align: center;
+    width: 100%;
     box-sizing: border-box;
     margin: 0;
 }
 
-/* 추천 리스트 - 리스트 아이콘을 초록색 원 체크모양으로 */
 .applyOptionRecList {
     list-style: none;
     padding-left: 0;
     margin: 0;
     font-size: 20px;
     font-weight: 600;
-    line-height: 1.8;   /* 줄 간격을 늘림 */
-    height: 120px;      /* 고정 높이 (예시 값) */
-    overflow: hidden;   /* 내용이 많을 경우 숨김 처리 */
+    line-height: 1.8;
+    height: 120px;
+    overflow: hidden;
 }
 
 .applyOptionRecList li {
@@ -136,7 +125,7 @@
 }
 
 .applyOptionRecList li::before {
-    content: "\2713"; /* 체크 표시 */
+    content: "\2713";
     position: absolute;
     left: 0;
     top: 50%;
@@ -152,7 +141,6 @@
     font-size: 14px;
 }
 
-/* 신청 버튼 (기존 스타일 유지) */
 .applyOptionBtn {
     display: inline-block;
     background: white;
@@ -162,9 +150,22 @@
     text-decoration: none;
     font-size: 18px;
     transition: background 0.3s ease;
-    border: 1px solid #009373;       /* 초록색 테두리 */
+    border: 1px solid #009373;
 }
 
 .applyOptionBtn:hover {
-    background: #e0f7f4;             /* hover 시 연한 초록색 계열 (원하는 색상으로 조정 가능) */
+    background: #e0f7f4;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    .applyPageContainer {
+        padding: 10px;
+    }
+    .applyBannerTitle {
+        font-size: 32px;
+    }
+    .applyOptionBox {
+        width: 100%;
+    }
 }

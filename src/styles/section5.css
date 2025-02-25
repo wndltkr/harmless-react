@@ -1,3 +1,4 @@
+/* section5.css */
 .service-info-container {
     width: 100%;
     background-color: #fff;
@@ -6,11 +7,11 @@
 }
 
 .service-info-content h3 {
-    font-size: 50px; /* 글자 크기를 기존보다 키웠습니다 */
+    font-size: 50px;
     font-weight: bold;
     color: #333;
-    margin-bottom: 100px; /* 이미지와 겹치지 않도록 여백을 늘림 */
-    line-height: 1.4;  /* 줄 간격을 약간 조정 (필요에 따라 변경) */
+    margin-bottom: 100px;
+    line-height: 1.4;
 }
 
 .highlight {
@@ -36,14 +37,12 @@
     display: inline-block;
 }
 
-/* 새 클래스 이름 사용: my-new-bubble */
 .my-new-bubble {
     width: 100% !important;
     max-width: 500px !important;
     display: block;
 }
 
-/* 말풍선 내부의 텍스트 */
 .bubble-text {
     position: absolute;
     top: 50%;
@@ -57,10 +56,9 @@
     width: 80%;
 }
 
-/* 아이콘을 말풍선 위에 배치 */
 .service-icon {
     position: absolute;
-    top: -60px; /* 말풍선과 아이콘 사이 간격 */
+    top: -60px;
     left: 50%;
     transform: translateX(-50%);
     width: 60px;
@@ -89,4 +87,16 @@
 
 .apply-button:hover {
     background: #007a5e;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    .service-info-content h3 {
+        font-size: 32px;
+        margin-bottom: 50px;
+    }
+    .service-list {
+        flex-direction: column;
+        gap: 20px;
+    }
 }

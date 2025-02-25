@@ -1,23 +1,21 @@
+/* section2.css */
 .section2 {
     padding: 80px 300px;
     background-color: #f9f9f9;
 }
 
-/* 질문 타이틀 영역 */
 .common_title {
     text-align: center;
     margin-bottom: 50px;
 }
 
-/* 질문 아이콘 크기 조정 */
 .icon img {
-    width: 160px !important; /* 더 크게 설정 */
+    width: 160px !important;
     display: block;
     margin: 0 630px;
     animation: bounce 2s infinite ease-in-out;
 }
 
-/* 위아래로 움직이는 애니메이션 */
 @keyframes bounce {
     0%, 100% {
         transform: translateY(0);
@@ -27,53 +25,46 @@
     }
 }
 
-/* 질문 텍스트 크기 증가 */
 .big-title {
-    font-size: 3.5rem !important;  /* 크기 증가 */
+    font-size: 3.5rem !important;
     color: #333;
     font-weight: bold;
     text-align: center;
     margin-top: 10px;
 }
 
-/* "불편" 부분 초록색 강조 */
 .highlighted-text {
     color: #009373 !important;
 }
 
-/* 불편 카드 컨테이너 (grid) */
 .inconvenience_container {
     display: grid;
-    grid-template-columns: repeat(2, 1fr); /* 2열 배치 */
-    gap: 35px; /* 간격 추가 */
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
     justify-content: center;
     align-items: stretch;
 }
 
-/* 1번 칸 (큰 칸 → 2칸 차지) */
 .large-card {
-    grid-column: span 2; /* 두 칸 차지 */
-    height: 420px; /* 기존보다 늘림 */
-    width: 93%; /* 가로 길이 줄임 */
+    grid-column: span 2;
+    height: 420px;
+    width: 93%;
     margin: 0 auto;
 }
 
-/* 2번 & 3번, 4번 & 5번 나란히 */
 .small-card {
-    height: 420px; /* 기존보다 늘림 */
-    width: 85%; /* 가로 길이 줄임 */
+    height: 420px;
+    width: 85%;
     margin: 0 auto;
 }
 
-/* 이미지 스타일 */
 .inconvenience_img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* 비율 유지하면서 넘치는 부분 잘림 */
+    object-fit: cover;
     border-radius: 12px;
 }
 
-/* 오버레이 텍스트 (이미지 내부, 세로 중앙 정렬) */
 .overlay_text {
     position: absolute;
     top: 50%;
@@ -84,26 +75,43 @@
     padding: 12px;
     border-radius: 8px;
     text-align: left;
-    transform: translateY(-50%); /* 세로 중앙 정렬 */
-    white-space: pre-line; /* 줄바꿈 적용 */
+    transform: translateY(-50%);
+    white-space: pre-line;
 }
 
-/* 숫자 (초록색 박스 안에 배치) */
 .overlay_text .number {
     font-size: 2rem;
     font-weight: bold;
-    background-color: #009373; /* 초록색 배경 */
-    color: white; /* 흰색 텍스트 */
+    background-color: #009373;
+    color: white;
     padding: 10px 18px;
     border-radius: 20px;
     display: inline-block;
-    margin-bottom: 15px; /* 간격 추가 */
+    margin-bottom: 15px;
 }
 
-/* 텍스트 스타일 */
 .overlay_text p {
-    font-size: 1.4rem; /* 크기 증가 */
+    font-size: 1.4rem;
     font-weight: bold;
     margin: 0;
     line-height: 1.6;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    .section2 {
+        padding: 40px 10px;
+    }
+    .icon img {
+        width: 100px !important;
+        margin: 0 auto;
+    }
+    .inconvenience_container {
+        grid-template-columns: 1fr;
+        gap: 20px;
+    }
+    .large-card, .small-card {
+        width: 100%;
+        height: auto;
+    }
 }

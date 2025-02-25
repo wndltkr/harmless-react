@@ -1,3 +1,4 @@
+/* aboutPage.css */
 .about-container {
     width: 100%;
     padding: 20px 0;
@@ -87,3 +88,22 @@
     font-weight: bold;
 }
 
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    .about-container {
+        padding: 10px 0;
+    }
+    .sub-top-banner {
+        padding: 15px 10px;
+    }
+    .underline {
+        width: 30px;
+        margin: 5px auto;
+    }
+    .content-wrapper {
+        margin: 0 10px;
+    }
+    .about-image img {
+        max-width: 100%;
+    }
+}

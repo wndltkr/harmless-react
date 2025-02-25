@@ -1,21 +1,3 @@
-.header_wrap {
-    width: 100%;
-    height: 80px; /* Header 높이 명확히 지정 */
-    background-color: #fff;
-    border-bottom: 1px solid #ddd;
-    position: fixed;
-    top: 0;
-    z-index: 100;
-    padding: 10px 0;
-    display: flex;
-    justify-content: center;
-}
-.main_menu ul {
-    list-style: none;
-    display: flex;
-    gap: 15px;
-}
-
 /* Problems List */
 .problems-list {
     list-style: none;
@@ -40,5 +22,5 @@
 }
 
 body {
-    padding-top: 90px; /* Header 아래 Swiper 여백 확보 */
+    padding-top: 90px;
 }
