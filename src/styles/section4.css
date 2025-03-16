@@ -106,11 +106,39 @@
 
 /* Responsive styles */
 @media only screen and (max-width: 768px) {
-    .section4 .section4_container {
+    .section4 .section4_title {
+        display: flex;
         flex-direction: column;
-        gap: 20px;
+        align-items: center;
+        text-align: center;
+        /* 불필요한 좌측 마진 제거 */
+        margin: 0 auto;
     }
-    .section4 .section4_text_container {
-        max-width: 100%;
+
+    /* 지도 아이콘 중앙 정렬 */
+    .section4 .section4_title .section4_icon {
+        display: block;
+        width: auto;
+        margin: 0 auto 15px auto;
+    }
+
+    /* 텍스트 부분 축소 */
+    .section4 .section4_title p {
+        font-size: 1.3rem !important;  /* 이전보다 줄임 */
+        text-align: center;
+        line-height: 1.2;
+        margin: 0 auto;
+    }
+
+    /* "서비스 준비중" 강조 텍스트 축소 */
+    .section4 .section4_line_effect {
+        font-size: 1.3rem !important;
+    }
+
+    /* 말풍선 조정 (필요 시) */
+    .section4 .section4_speech_bubble {
+        max-width: 90% !important;
+        margin: 20px auto 0 auto;
+        font-size: 1rem;
     }
 }

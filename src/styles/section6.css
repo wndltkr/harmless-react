@@ -48,20 +48,28 @@
 
 /* Responsive styles */
 @media only screen and (max-width: 768px) {
+    /* Section6 컨테이너 높이 축소 */
     .section6-container {
-        height: auto;
-        padding: 20px;
+        height: 150px; /* 기존 300px에서 줄임 */
     }
+
+    /* Section6 콘텐츠 영역 조정 */
     .section6-content {
-        width: 100%;
-        padding-right: 20px;
-        transform: translateY(0);
+        width: 90%;
+        max-width: 100%;
+        padding-right: 5px;  /* 오른쪽 여백 조금 더 축소 */
+        transform: translateY(-20px);  /* 콘텐츠 오프셋 축소 */
     }
+
+    /* 제목 텍스트 크기 추가 축소 */
     .section6-content h3 {
-        font-size: 32px;
+        font-size: 20px;  /* 기존 24px보다 줄임 */
+        line-height: 1.2;
     }
+
+    /* 버튼 크기 및 폰트 추가 축소 */
     .apply-button {
-        font-size: 24px;
-        padding: 10px 20px;
+        font-size: 14px;  /* 기존 16px보다 줄임 */
+        padding: 4px 8px; /* 여백 축소 */
     }
 }

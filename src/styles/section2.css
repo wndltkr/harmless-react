@@ -106,12 +106,63 @@
         width: 100px !important;
         margin: 0 auto;
     }
+
+    /* 1) 컨테이너는 flex나 block으로 전환 → 한 줄에 하나씩 */
     .inconvenience_container {
-        grid-template-columns: 1fr;
-        gap: 20px;
+        display: block; /* or flex; flex-direction: column; */
+        gap: 20px; /* 블록 요소이므로 gap 대신 margin으로도 가능 */
     }
+
+    /* 2) large-card, small-card는 width: 100%, height: auto */
     .large-card, .small-card {
-        width: 100%;
-        height: auto;
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 auto 20px; /* 카드 간 간격 */
+        position: static !important; /* 오버레이 위치를 일반 흐름으로 */
+    }
+
+    /* 오버레이 텍스트(번호와 본문)를 이미지 위에 배치 */
+    .overlay_text {
+        position: absolute !important;
+        top: 50% !important;
+        left: 10px !important;
+        transform: translateY(-50%) !important;
+        background: none !important; /* 배경 투명 */
+        padding: 12px !important;
+        text-align: left !important;
+    }
+
+    /* 번호 스타일 */
+    .overlay_text .number {
+        font-size: 1.8rem !important;
+        font-weight: bold !important;
+        background-color: #009373;
+        color: #fff;
+        padding: 10px 18px;
+        border-radius: 20px;
+        display: inline-block;
+        margin-bottom: 15px;
+    }
+
+    /* 본문 텍스트 스타일 */
+    .overlay_text p {
+        font-size: 1rem !important;
+        font-weight: bold !important; /* 굵게 표시 */
+        margin: 0;
+        line-height: 1.6;
+        color: #333; /* 필요 시 다른 색상으로 변경 */
+        white-space: pre-line; /* 줄바꿈 유지 */
+    }
+
+    .large-card, .small-card {
+        width: 100% !important;
+        height: 200px !important; /* 420px로 고정해 다른 카드와 동일 높이 */
+        margin: 0 auto 20px !important;
+        position: relative !important; /* 오버레이를 위해 position: relative */
+        overflow: hidden; /* 이미지가 넘치지 않도록 */
+    }
+
+    .big-title {
+        font-size: 2rem !important; /* 모바일에서 글자 크기 축소 */
     }
 }

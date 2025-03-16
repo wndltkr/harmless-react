@@ -1,5 +1,5 @@
 import React from "react";
-import "../styles/footer.css"; // 스타일 파일 연결
+import "../styles/footer.css";
 
 const Footer = () => {
     return (
@@ -20,10 +20,15 @@ const Footer = () => {
                         </ul>
                     </nav>
                     <div className="footer-info">
-                        <p>상호명 : 무해 | 대표 : 권순표 | TEL : 010-8456-2741 | Email : tnsvy2@naver.com</p>
-                        <p>주소 : 대구광역시 달성군 하빈면 하빈남로 355 | 사업자 등록번호 : 207-33-01613</p>
+                        <p>
+                            상호명 : 무해 | 대표 : 권순표 | TEL : 010-8456-2741 | Email : tnsvy2@naver.com
+                            <span className="mobile-break"><br /></span>
+                            주소 : 대구광역시 달성군 하빈면 하빈남로 355 | 사업자 등록번호 : 207-33-01613
+                        </p>
                     </div>
-                    <p className="copyright">Copyright 2024. 무해 Co. All rights reserved.</p>
+                    <p className="copyright">
+                        Copyright 2024. 무해 Co. All rights reserved.
+                    </p>
                 </div>
             </div>
         </footer>

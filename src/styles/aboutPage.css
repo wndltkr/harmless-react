@@ -94,11 +94,18 @@
         padding: 10px 0;
     }
     .sub-top-banner {
-        padding: 15px 10px;
+        height: 200px !important;
+        padding: 3px !important;
+        width: calc(100% - 40px) !important;
+        margin: 0 auto !important;
+    }
+    .sub-top-banner h1 {
+        font-size: 24px !important;
+        margin: 0 !important;
     }
     .underline {
-        width: 30px;
-        margin: 5px auto;
+        width: 20px !important;
+        margin: 2px auto !important;
     }
     .content-wrapper {
         margin: 0 10px;

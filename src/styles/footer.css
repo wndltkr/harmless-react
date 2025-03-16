@@ -54,6 +54,10 @@
     color: #bbb;
 }
 
+.mobile-break {
+    display: none; /* 기본 숨김 */
+}
+
 /* Responsive styles */
 @media only screen and (max-width: 768px) {
     .footer-container {
@@ -63,5 +67,19 @@
     .footer-content {
         padding-right: 0;
         text-align: center;
+    }
+
+    .footer-info p {
+        margin: 5px 0;
+        font-size: 14px;
+        line-height: 1.4;
+    }
+    .copyright {
+        margin-top: 10px;
+        font-size: 12px;
+    }
+
+    .mobile-break {
+        display: inline; /* 모바일에서만 br 표시 */
     }
 }
