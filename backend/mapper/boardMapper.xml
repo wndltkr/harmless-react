@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<mapper namespace="BoardMapper">
+    <select id="getAllPosts" resultType="map">
+        SELECT * FROM board ORDER BY created_at DESC;
+    </select>
+
+    <select id="getPostById" resultType="map">
+        SELECT * FROM board WHERE id = #{id};
+    </select>
+
+    <insert id="addPost">
+        INSERT INTO board (title, content, author) VALUES (#{title}, #{content}, #{author});
+    </insert>
+
+    <update id="updatePost">
+        UPDATE board SET title = #{title}, content = #{content} WHERE id = #{id};
+    </update>
+
+    <delete id="deletePost">
+        DELETE FROM board WHERE id = #{id};
+    </delete>
+</mapper>
