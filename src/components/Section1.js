@@ -12,7 +12,7 @@ const Section1 = () => {
                             {/* 텍스트 블록 1 */}
                             <div className="fade-in-up" data-anim-delay="0">
                                 <p className="intro-text">현재 전 세계 환경 문제로 대두되고 있는 문제</p>
-                                <p className="highlight-title">"패스트 패션”</p>
+                                <p className="highlight-title">"패스트 패션"</p>
                                 <div className="spacer-lg"></div> {/* 간격 추가 */}
                             </div>
 

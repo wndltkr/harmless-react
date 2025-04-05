@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
-import "../styles/noticePage.css";
+import React, { useState } from "react";
+import "../styles/reviewPage.css";
 
-const NoticePage = () => {
+const ReviewPage = () => {
     const [currentPage, setCurrentPage] = useState(1);
     const postsPerPage = 10;
 
@@ -10,21 +9,24 @@ const NoticePage = () => {
     const posts = [
         {
             id: 1,
-            title: "무해 서비스 이용 안내",
+            title: "매우 만족스러운 서비스",
+            author: "김**",
             date: "2024-04-04",
-            views: 123
+            views: 156
         },
         {
             id: 2,
-            title: "수거 가능 품목 안내",
+            title: "친절하고 빠른 수거",
+            author: "이**",
             date: "2024-04-03",
-            views: 89
+            views: 98
         },
         {
             id: 3,
-            title: "서비스 지역 확장 안내",
+            title: "편리한 이용 방법",
+            author: "박**",
             date: "2024-04-02",
-            views: 45
+            views: 87
         }
     ];
 
@@ -51,6 +53,14 @@ const NoticePage = () => {
         overflow: 'hidden'
     };
 
+    const contentStyle = {
+        position: 'relative',
+        zIndex: 2,
+        textAlign: 'center',
+        color: 'white',
+        marginBottom: '20px'
+    };
+
     const linkContainerStyle = {
         position: 'absolute',
         bottom: 0,
@@ -73,12 +83,12 @@ const NoticePage = () => {
     };
 
     return (
-        <div className="notice-page">
+        <div className="review-page">
             {/* 상단 배너 */}
-            <div className="notice-banner" style={bannerStyle}>
-                <div className="banner-content">
-                    <h1 className="notice-title">공지사항</h1>
-                    <div className="notice-divider"></div>
+            <div className="review-banner" style={bannerStyle}>
+                <div style={contentStyle}>
+                    <h1 className="review-title">리뷰</h1>
+                    <div className="review-divider"></div>
                 </div>
                 <div style={linkContainerStyle}>
                     <a href="/notice" style={linkItemStyle}>공지사항</a>
@@ -87,17 +97,15 @@ const NoticePage = () => {
                 </div>
             </div>
 
-            {/* 메인 제목 */}
-            <h1 className="page-main-title">공지사항</h1>
-
             {/* 게시판 컨테이너 */}
-            <div className="notice-container">
+            <div className="review-container">
                 {/* 게시글 목록 */}
-                <table className="notice-table">
+                <table className="review-table">
                     <thead>
                         <tr>
                             <th>번호</th>
                             <th>제목</th>
+                            <th>작성자</th>
                             <th>작성일</th>
                             <th>조회수</th>
                         </tr>
@@ -107,6 +115,7 @@ const NoticePage = () => {
                             <tr key={post.id}>
                                 <td>{post.id}</td>
                                 <td>{post.title}</td>
+                                <td>{post.author}</td>
                                 <td>{post.date}</td>
                                 <td>{post.views}</td>
                             </tr>
@@ -115,12 +124,13 @@ const NoticePage = () => {
                 </table>
 
                 {/* 검색 영역 */}
-                <div className="notice-search">
+                <div className="review-search">
                     <div className="search-box">
                         <select className="search-select">
                             <option value="title">제목</option>
                             <option value="content">내용</option>
                             <option value="title_content">제목+내용</option>
+                            <option value="writer">작성자</option>
                         </select>
                         <input type="text" className="search-input" placeholder="검색어를 입력하세요" />
                         <button className="search-button">검색</button>
@@ -128,7 +138,7 @@ const NoticePage = () => {
                 </div>
 
                 {/* 페이지네이션 */}
-                <div className="notice-pagination">
+                <div className="review-pagination">
                     {Array.from({ length: totalPages }, (_, i) => i + 1).map((page) => (
                         <button
                             key={page}
@@ -140,8 +150,8 @@ const NoticePage = () => {
                     ))}
                 </div>
 
-                {/* 글쓰기 버튼 (관리자용) */}
-                <div className="notice-actions">
+                {/* 글쓰기 버튼 */}
+                <div className="review-actions">
                     <button className="write-button">글쓰기</button>
                 </div>
             </div>
@@ -149,4 +159,4 @@ const NoticePage = () => {
     );
 };
 
-export default NoticePage;
+export default ReviewPage; 

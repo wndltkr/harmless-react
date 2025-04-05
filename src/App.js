@@ -10,6 +10,9 @@ import ApplyPage from "./pages/ApplyPage";
 import AboutPage from "./pages/AboutPage";
 import Apply1Page from "./pages/Apply1Page";
 import Apply2Page from "./pages/Apply2Page";
+import NoticePage from './pages/NoticePage';
+import ReviewPage from './pages/ReviewPage';
+import InquiryPage from './pages/InquiryPage';
 
 function App() {
     return (
@@ -23,6 +26,9 @@ function App() {
                 <Route path="/about" element={<AboutPage />} />
                 <Route path="/apply1" element={<Apply1Page />} />
                 <Route path="/apply2" element={<Apply2Page />} />
+                <Route path="/notice" element={<NoticePage />} />
+                <Route path="/review" element={<ReviewPage />} />
+                <Route path="/inquiry" element={<InquiryPage />} />
             </Routes>
             <Footer />
         </Router>
