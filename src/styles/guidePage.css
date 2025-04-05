@@ -1,9 +1,10 @@
 /* guidePage.css */
 .guidePageContainer {
     font-family: "Noto Sans KR", sans-serif;
-    padding: 20px 0 0 0;
+    width: 100%;
     max-width: 1200px;
     margin: 0 auto;
+    padding: 0;
 }
 
 .guideBanner {
@@ -128,6 +129,7 @@
 }
 
 .guideContactWrap {
+    width: 100vw;
     background: #009373;
     text-align: center;
     padding: 60px;
@@ -136,7 +138,6 @@
     margin-bottom: 0;
     border-radius: 10px;
     position: relative;
-    width: 100vw;
     left: 50%;
     right: 50%;
     margin-left: -50vw;

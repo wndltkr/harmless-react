@@ -1,12 +1,17 @@
 .inquiry-page {
-    background-color: #f8f9fa;
-    min-height: 100vh;
-    padding: 2rem 0;
+    width: 100%;
+    background-color: #f9fafb;
+    margin-top: 0;
+    padding: 0;
 }
 
 .inquiry-banner {
     position: relative;
     overflow: hidden;
+    height: 150px;
+    width: 95%;
+    max-width: 1800px;
+    margin: 0 auto 3rem;
 }
 
 .banner-content {
@@ -213,4 +218,15 @@
         padding: 0.5rem 1rem;
         font-size: 0.875rem;
     }
+}
+
+.page-main-title {
+    font-size: 36px;
+    color: #333;
+    margin: 60px auto 40px;
+    text-align: center;
+    font-weight: 600;
+    font-family: 'Pretendard', sans-serif;
+    width: 95%;
+    max-width: 1800px;
 } 

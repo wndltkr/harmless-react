@@ -1,21 +1,28 @@
 .notice-page {
     width: 100%;
     background-color: #f9fafb;
+    margin-top: 0;
+    padding: 0;
 }
 
 .notice-banner {
     position: relative;
     overflow: hidden;
+    height: 150px;
     width: 95%;
     max-width: 1800px;
     margin: 0 auto 3rem;
 }
 
+.page-main-title, .animated-title {
+    text-align: center;
+}
+
 .page-main-title {
-    font-size: 32px;
+    font-size: 36px;
     color: #333;
     margin: 40px auto;
-    text-align: left;
+    text-align: center;
     font-weight: 600;
     font-family: 'Pretendard', sans-serif;
     width: 95%;
@@ -27,9 +34,6 @@
     max-width: 1800px;
     margin: 0 auto;
     padding: 20px;
-    background-color: #fff;
-    border-radius: 10px;
-    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
 }
 
 .notice-banner {
@@ -303,4 +307,11 @@
     margin-bottom: 40px;
     text-align: center;
     font-weight: bold;
+}
+
+.animated-title {
+    animation: slideUp 1s ease-out forwards;
+    opacity: 0;
+    transform: translateY(50px);
+    text-align: center;
 } 

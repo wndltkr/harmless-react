@@ -47,7 +47,7 @@ const ReviewPage = () => {
         display: 'flex',
         alignItems: 'center',
         justifyContent: 'center',
-        marginBottom: '3rem',
+        marginBottom: '20px',
         position: 'relative',
         borderRadius: '20px',
         overflow: 'hidden'
@@ -84,18 +84,22 @@ const ReviewPage = () => {
 
     return (
         <div className="review-page">
+
             {/* 상단 배너 */}
             <div className="review-banner" style={bannerStyle}>
                 <div style={contentStyle}>
-                    <h1 className="review-title">리뷰</h1>
+                    <h1 className="review-title">이용 후기</h1>
                     <div className="review-divider"></div>
                 </div>
                 <div style={linkContainerStyle}>
                     <a href="/notice" style={linkItemStyle}>공지사항</a>
-                    <a href="/inquiry" style={linkItemStyle}>문의하기</a>
-                    <a href="/review" style={linkItemStyle}>리뷰</a>
+                    <a href="/inquiry" style={linkItemStyle}>1:1 문의</a>
+                    <a href="/review" style={linkItemStyle}>이용후기</a>
                 </div>
             </div>
+
+            {/* 메인 제목 */}
+            <h1 className="page-main-title animated-title">이용 후기</h1>
 
             {/* 게시판 컨테이너 */}
             <div className="review-container">

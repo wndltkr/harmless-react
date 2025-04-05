@@ -1,12 +1,17 @@
 .review-page {
     width: 100%;
-    padding: 20px 0;
     background-color: #f9fafb;
+    margin-top: 0;
+    padding: 0;
 }
 
 .review-banner {
     position: relative;
     overflow: hidden;
+    height: 150px;
+    width: 95%;
+    max-width: 1800px;
+    margin: 0 auto 3rem;
 }
 
 .banner-content {
@@ -192,4 +197,15 @@
         padding: 6px 10px;
         font-size: 0.875rem;
     }
+}
+
+.page-main-title {
+    font-size: 36px;
+    color: #333;
+    margin: 60px auto 40px;
+    text-align: center;
+    font-weight: 600;
+    font-family: 'Pretendard', sans-serif;
+    width: 95%;
+    max-width: 1800px;
 } 
