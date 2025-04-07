@@ -1,5 +1,5 @@
-import React from "react";
-import { motion } from "framer-motion";
+import React, { useRef } from "react";
+import { motion, useInView } from "framer-motion";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "../styles/guidePage.css";
@@ -27,6 +27,20 @@ const collectionItems2 = [
 ];
 
 const GuidePage = () => {
+    // refs for scroll animations
+    const guidePriceRef = useRef(null);
+    const section3Ref = useRef(null);
+    const section8Ref = useRef(null);
+    const noCollectionRef = useRef(null);
+    const contactRef = useRef(null);
+
+    // inView states
+    const guidePriceInView = useInView(guidePriceRef, { once: true, amount: 0.3 });
+    const section3InView = useInView(section3Ref, { once: true, amount: 0.3 });
+    const section8InView = useInView(section8Ref, { once: true, amount: 0.3 });
+    const noCollectionInView = useInView(noCollectionRef, { once: true, amount: 0.3 });
+    const contactInView = useInView(contactRef, { once: true, amount: 0.3 });
+
     // 상단 배너 인라인 스타일 (새 이미지와 디자인 적용)
     const bannerStyle = {
         background: "url('/files/attach/images/106/893ada4896cce8c524983e6025a10144.jpg') no-repeat center center",
@@ -53,7 +67,13 @@ const GuidePage = () => {
             </div>
 
             {/* 매입 단가 섹션 */}
-            <div className="guidePriceWrap">
+            <motion.div 
+                ref={guidePriceRef}
+                initial={{ opacity: 0, y: 100 }}
+                animate={guidePriceInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="guidePriceWrap"
+            >
                 <h3 className="guideSubTitle">매입 단가</h3>
                 <div className="priceList">
                     <div className="priceItem">
@@ -66,29 +86,46 @@ const GuidePage = () => {
                         <p>*kg → <b>300원</b></p>
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
-            <b>
-                <div className="guide_check_wrap mt-30 mb-10" data-anim-delay="0" data-anim-type="fade-in-up">
+            <div>
+                <motion.div 
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, ease: "easeOut", delay: 0.2 }}
+                    className="guide_check_wrap mt-30 mb-10"
+                >
                     <div className="guide-check-box">
                         <i className="ri-checkbox-circle-line guide-highlight fs-30 pr-10 lh-1"></i>
                         <span className="guide-text-large guide-weight-medium">
                             이용자분들의 편의를 위해 <b className="guide-highlight">최소 수거 수량에 제한이 없습니다.</b>
                         </span>
                     </div>
-                </div>
-                <div className="guide_check_wrap" data-anim-delay="0" data-anim-type="fade-in-up">
+                </motion.div>
+                <motion.div 
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={{ opacity: 1, y: 0 }}
+                    transition={{ duration: 0.8, ease: "easeOut", delay: 0.4 }}
+                    className="guide_check_wrap"
+                >
                     <div className="guide-check-box">
                         <i className="ri-checkbox-circle-line guide-highlight fs-30 pr-10 lh-1"></i>
                         <span className="guide-text-large guide-weight-medium">
                             무역 업체 단가 변동에 따라 현 매입 단가도 변동 될 수 있으며 <b className="guide-highlight">항상 최고가로 매입 단가 책정 하겠습니다.</b>
                         </span>
                     </div>
-                </div>
-            </b>
+                </motion.div>
+            </div>
 
             {/* 수거 가능 품목 */}
-            <section id="section3" className="section section3 clearfix">
+            <motion.section 
+                ref={section3Ref}
+                initial={{ opacity: 0, y: 100 }}
+                animate={section3InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                id="section3" 
+                className="section section3 clearfix"
+            >
                 <div className="bh_wrap">
                     <div className="section3-title-wrap">
                         <motion.img 
@@ -165,9 +202,16 @@ const GuidePage = () => {
                         </Swiper>
                     </div>
                 </div>
-            </section>
+            </motion.section>
 
-            <section id="section8" className="section8">
+            <motion.section 
+                ref={section8Ref}
+                initial={{ opacity: 0, y: 100 }}
+                animate={section8InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                id="section8" 
+                className="section8"
+            >
                 <div className="sec8-wrap">
                     <div className="sec8-check-item">
                         <div className="sec8-flex">
@@ -215,10 +259,16 @@ const GuidePage = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </motion.section>
 
             {/* 수거 불가능 품목 */}
-            <div className="guideNoCollectionWrap">
+            <motion.div 
+                ref={noCollectionRef}
+                initial={{ opacity: 0, y: 100 }}
+                animate={noCollectionInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="guideNoCollectionWrap"
+            >
                 <img
                     src="/files/attach/images/sub/x.png"
                     alt="움직이는 아이콘"
@@ -248,16 +298,21 @@ const GuidePage = () => {
                         </div>
                     </div>
                 </div>
-            </div>
+            </motion.div>
 
             {/* 1:1 문의 유도 */}
-            <div className="guideContactWrap">
+            <motion.div 
+                ref={contactRef}
+                initial={{ opacity: 0, y: 100 }}
+                animate={contactInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="guideContactWrap"
+            >
                 <h3>수거 가능, 불가능 품목이 헷갈린다면?</h3>
                 <p>언제든지 1:1 문의를 남겨주세요.</p>
                 <a href="/inquiry" className="contactBtn">1:1 문의 바로가기</a>
-            </div>
+            </motion.div>
         </div>
-        
     );
 };
 

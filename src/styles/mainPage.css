@@ -115,11 +115,19 @@
     margin-bottom: 50px;
 }
 
+.icon {
+    text-align: center;
+    margin-bottom: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
 .icon img {
     width: 160px !important;
-    display: block;
-    margin: 0 630px;
+    display: inline-block;
     animation: bounce 2s infinite ease-in-out;
+    margin: 0;
 }
 
 @keyframes bounce {
@@ -286,10 +294,10 @@
 
 .section4_pin {
     position: absolute;
-    top: 55%;
-    left: 67%;
+    top: 48%;
+    left: 60%;
     transform: translate(-50%, -50%);
-    animation: bounce 1.5s infinite;
+    animation: iconBounce 2s infinite ease-in-out;
 }
 
 .section4_text_container {
@@ -311,6 +319,7 @@
 .section4_icon {
     width: 60px;
     margin-bottom: 15px;
+    animation: iconBounce 2s infinite ease-in-out;
 }
 
 .section4_title p {
@@ -378,6 +387,7 @@
 .section7_icon img {
     width: 80px;
     margin-bottom: 15px;
+    animation: iconBounce 2s infinite ease-in-out;
 }
 
 .section7_title {
@@ -582,5 +592,14 @@
         width: 200px;
         top: 10px;
         right: -20px;
+    }
+}
+
+@keyframes iconBounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
     }
 } 

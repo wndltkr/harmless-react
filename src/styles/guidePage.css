@@ -4,6 +4,9 @@
     width: 100%;
     padding: 0;
     overflow-x: hidden;
+    position: relative;
+    max-width: 100%;
+    margin: 0;
 }
 
 .guideBanner {
@@ -115,11 +118,10 @@
     margin-top: 50px;
     padding: 30px;
     background: #eee;
-    border-radius: 0;
     position: relative;
-    width: 100vw;
-    left: 50%;
-    transform: translateX(-50%);
+    width: 100%;
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
 }
 
 .moving-icon {
@@ -166,17 +168,16 @@
 }
 
 .guideContactWrap {
-    width: 100vw;
+    width: 100%;
     background: #009373;
     text-align: center;
     padding: 60px;
     color: white;
     margin: 0;
-    border-radius: 0;
     font-size: 28px;
     position: relative;
-    left: 50%;
-    transform: translateX(-50%);
+    margin-left: calc(-50vw + 50%);
+    margin-right: calc(-50vw + 50%);
 }
 
 .guideContactWrap h3 {
@@ -235,6 +236,7 @@
 .section3 {
     padding: 80px 20px;
     background-color: #fff;
+    text-align: center;
 }
 
 .guide-content {
@@ -391,49 +393,40 @@
 }
 
 .section3-title-wrap {
+    text-align: center;
+    margin-bottom: 40px;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    margin-bottom: 40px;
-    text-align: center;
 }
 
-.section3-icon-wrap {
-    width: 50px;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-}
-
-.section3-icon-wrap img {
-    width: 100%;
-    height: 100%;
-    object-fit: contain;
-}
-
-.section3-title {
-    font-size: 32px;
+.section3-title-wrap .guideSubTitle {
+    font-size: 48px;
     font-weight: bold;
-    color: #333;
+    margin: 0;
 }
 
-@media screen and (max-width: 768px) {
-    .section3-title-wrap {
-        margin-bottom: 30px;
+.section3 {
+    padding: 80px 20px;
+    background-color: #fff;
+}
+
+.section3 .common_title {
+    margin-bottom: 40px;
+}
+
+.section3 .common_title p {
+    font-size: 32px;
+    line-height: 1.4;
+    margin: 20px 0;
+}
+
+@media only screen and (max-width: 768px) {
+    .section3-title-wrap .guideSubTitle {
+        font-size: 32px;
     }
 
-    .moving-icon {
-        width: 60px;
-    }
-
-    .section3-icon-wrap {
-        width: 40px;
-        height: 40px;
-    }
-
-    .section3-title {
+    .section3 .common_title p {
         font-size: 24px;
     }
 }

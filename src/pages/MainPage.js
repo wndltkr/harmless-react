@@ -1,11 +1,12 @@
 import React from 'react';
 import SwiperSlider from "../components/SwiperSlider";
-import { motion } from 'framer-motion';
+import { motion, useInView } from 'framer-motion';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper/modules';
 import 'swiper/css';
 import 'swiper/css/autoplay';
 import "../styles/mainPage.css";
+import { useRef } from "react";
 
 const collectionItems1 = [
     { id: 1, imgSrc: '/files/attach/images/main/t-shirt.png', name: '티셔츠' },
@@ -28,11 +29,31 @@ const collectionItems2 = [
 ];
 
 const MainPage = () => {
+    // 각 섹션에 대한 ref 생성
+    const section1Ref = useRef(null);
+    const section2Ref = useRef(null);
+    const section3Ref = useRef(null);
+    const section4Ref = useRef(null);
+    const section7Ref = useRef(null);
+
+    // 각 섹션의 inView 상태 확인
+    const section1InView = useInView(section1Ref, { once: true, amount: 0.3 });
+    const section2InView = useInView(section2Ref, { once: true, amount: 0.3 });
+    const section3InView = useInView(section3Ref, { once: true, amount: 0.3 });
+    const section4InView = useInView(section4Ref, { once: true, amount: 0.3 });
+    const section7InView = useInView(section7Ref, { once: true, amount: 0.3 });
+
     return (
         <main className="main-content">
             <SwiperSlider />
 
-            <section id="section1" className="section section1 clearfix">
+            <motion.section
+                ref={section1Ref}
+                initial={{ opacity: 0, y: 100 }}
+                animate={section1InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="section section1 clearfix"
+            >
                 <div className="bh_wrap">
                     <div className="common_about_wrap">
                         <div className="common_about fixed">
@@ -84,9 +105,15 @@ const MainPage = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </motion.section>
 
-            <section id="section2" className="section section2 clearfix">
+            <motion.section
+                ref={section2Ref}
+                initial={{ opacity: 0, y: 100 }}
+                animate={section2InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="section section2 clearfix"
+            >
                 <div className="bh_wrap">
                     <div className="common_inconvenience">
                         <div className="common_title fade-in-up" data-anim-delay="0">
@@ -141,9 +168,15 @@ const MainPage = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </motion.section>
 
-            <section id="section3" className="section section3 clearfix">
+            <motion.section
+                ref={section3Ref}
+                initial={{ opacity: 0, y: 100 }}
+                animate={section3InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="section section3 clearfix"
+            >
                 <div className="bh_wrap">
                     <div className="common_title fade-in-up">
                         <div className="icon">
@@ -217,9 +250,15 @@ const MainPage = () => {
                         </Swiper>
                     </div>
                 </div>
-            </section>
+            </motion.section>
 
-            <section id="section4" className="section section4 clearfix">
+            <motion.section
+                ref={section4Ref}
+                initial={{ opacity: 0, y: 100 }}
+                animate={section4InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="section section4 clearfix"
+            >
                 <div className="bh_wrap">
                     <div className="section4_container">
                         <div className="section4_daegu_map fade-in-left">
@@ -248,9 +287,15 @@ const MainPage = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </motion.section>
 
-            <section id="section7" className="section7">
+            <motion.section
+                ref={section7Ref}
+                initial={{ opacity: 0, y: 100 }}
+                animate={section7InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+                transition={{ duration: 0.8, ease: "easeOut" }}
+                className="section section7"
+            >
                 <div className="section7_container">
                     <div className="section7_bg_logo">
                         <img src="/files/attach/images/main/section5_logo.png" alt="background logo" />
@@ -286,7 +331,7 @@ const MainPage = () => {
                         </div>
                     </div>
                 </div>
-            </section>
+            </motion.section>
         </main>
     );
 };

@@ -1,5 +1,6 @@
 import React from "react";
 import { Link } from "react-router-dom";
+import { motion } from "framer-motion";
 import "../styles/applyPage.css";
 
 const ApplyPage = () => {
@@ -37,9 +38,20 @@ const ApplyPage = () => {
                 </div>
             </div>
 
-            <div className="applyOptionsContainer">
+            <motion.div 
+                className="applyOptionsContainer"
+                initial={{ opacity: 0 }}
+                animate={{ opacity: 1 }}
+                transition={{ duration: 0.5 }}
+            >
                 {/* 대면 수거 신청 옵션 */}
-                <div className="applyOptionBox" style={optionBoxStyle}>
+                <motion.div 
+                    className="applyOptionBox" 
+                    style={optionBoxStyle}
+                    initial={{ x: -100, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                >
                     <h2 className="applyOptionTitle">대면 수거 신청</h2>
                     <div className="applyOptionSection">
                         <h3 className="applyOptionSectionTitle">대면 수거란?</h3>
@@ -61,10 +73,16 @@ const ApplyPage = () => {
                     <Link to="/apply1" className="applyOptionBtn">
                         대면 수거 신청하기
                     </Link>
-                </div>
+                </motion.div>
 
                 {/* 비대면 수거 신청 옵션 */}
-                <div className="applyOptionBox" style={optionBoxStyle}>
+                <motion.div 
+                    className="applyOptionBox" 
+                    style={optionBoxStyle}
+                    initial={{ x: 100, opacity: 0 }}
+                    animate={{ x: 0, opacity: 1 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                >
                     <h2 className="applyOptionTitle">비대면 수거 신청</h2>
                     <div className="applyOptionSection">
                         <h3 className="applyOptionSectionTitle">비대면 수거란?</h3>
@@ -85,8 +103,8 @@ const ApplyPage = () => {
                     <Link to="/apply2" className="applyOptionBtn">
                         비대면 수거 신청하기
                     </Link>
-                </div>
-            </div>
+                </motion.div>
+            </motion.div>
         </div>
     );
 };

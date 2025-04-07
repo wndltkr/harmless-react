@@ -1,8 +1,20 @@
-import React from "react";
-import { motion } from 'framer-motion';
+import React, { useRef } from "react";
+import { motion, useInView } from 'framer-motion';
 import "../styles/aboutPage.css";
 
 const AboutPage = () => {
+    // refs for scroll animations
+    const section1Ref = useRef(null);
+    const section2Ref = useRef(null);
+    const section6Ref = useRef(null);
+    const serviceInfoRef = useRef(null);
+
+    // inView states
+    const section1InView = useInView(section1Ref, { once: true, amount: 0.3 });
+    const section2InView = useInView(section2Ref, { once: true, amount: 0.3 });
+    const section6InView = useInView(section6Ref, { once: true, amount: 0.3 });
+    const serviceInfoInView = useInView(serviceInfoRef, { once: true, amount: 0.3 });
+
     // 상단 배너에 적용할 인라인 스타일 객체
     const bannerStyle = {
         textAlign: "center",
@@ -34,7 +46,14 @@ const AboutPage = () => {
 
             {/* 메인 컨텐츠 */}
             <div className="content-wrapper">
-                <section id="section1" className="section section1 clearfix">
+                <motion.section 
+                    ref={section1Ref}
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={section1InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    id="section1" 
+                    className="section section1 clearfix"
+                >
                     <div className="bh_wrap">
                         <div className="common_about_wrap">
                             <div className="common_about fixed">
@@ -86,9 +105,16 @@ const AboutPage = () => {
                             </div>
                         </div>
                     </div>
-                </section>
+                </motion.section>
 
-                <section id="section2" className="section section2 clearfix">
+                <motion.section 
+                    ref={section2Ref}
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={section2InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    id="section2" 
+                    className="section section2 clearfix"
+                >
                     <div className="bh_wrap">
                         <div className="common_inconvenience">
                             <div className="common_title fade-in-up" data-anim-delay="0">
@@ -143,16 +169,23 @@ const AboutPage = () => {
                             </div>
                         </div>
                     </div>
-                </section>
+                </motion.section>
 
-                <div className="section6-container" style={{
-                    background: `url(${process.env.PUBLIC_URL}/files/attach/images/sub/about_img.jpg) no-repeat center center`,
-                    backgroundSize: "cover",
-                    padding: "60px 0",
-                    textAlign: "left",
-                    display: "flex",
-                    justifyContent: "center"
-                }}>
+                <motion.div 
+                    ref={section6Ref}
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={section6InView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className="section6-container" 
+                    style={{
+                        background: `url(${process.env.PUBLIC_URL}/files/attach/images/sub/about_img.jpg) no-repeat center center`,
+                        backgroundSize: "cover",
+                        padding: "60px 0",
+                        textAlign: "left",
+                        display: "flex",
+                        justifyContent: "center"
+                    }}
+                >
                     <div className="section6-content">
                         <h3>
                             저희 무해는 <br />
@@ -163,9 +196,15 @@ const AboutPage = () => {
                             <a href="/apply" className="apply-button">수거 신청하기</a>
                         </div>
                     </div>
-                </div>
+                </motion.div>
 
-                <div className="service-info-container">
+                <motion.div 
+                    ref={serviceInfoRef}
+                    initial={{ opacity: 0, y: 100 }}
+                    animate={serviceInfoInView ? { opacity: 1, y: 0 } : { opacity: 0, y: 100 }}
+                    transition={{ duration: 0.8, ease: "easeOut" }}
+                    className="service-info-container"
+                >
                     <div className="service-info-content">
                         <h3>
                             무해의 <span className="highlight">자세한 서비스</span>가 <br />
@@ -195,7 +234,7 @@ const AboutPage = () => {
                             </a>
                         </div>
                     </div>
-                </div>
+                </motion.div>
             </div>
         </div>
     );
