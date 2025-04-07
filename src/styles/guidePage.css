@@ -3,9 +3,7 @@
     font-family: "Noto Sans KR", sans-serif;
     width: 100%;
     padding: 0;
-    overflow-x: hidden;
     position: relative;
-    max-width: 100%;
     margin: 0;
 }
 
@@ -87,7 +85,7 @@
 .mb-10 {
     margin: 1px !important;
     padding: 1px !important;
-    width: 1175px; /* priceItem 550px * 2 + gap 20px */
+    width: 1120px;
     margin-left: auto !important;
     margin-right: auto !important;
     display: flex;
@@ -102,7 +100,7 @@
     border-radius: 8px;
     align-items: center;
     margin: 5px auto;
-    width: 1120px; /* priceList와 동일한 너비 */
+    width: 1120px;
 }
 
 .guide-text-large {
@@ -119,9 +117,9 @@
     padding: 30px;
     background: #eee;
     position: relative;
-    width: 100%;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
+    width: 100%; /* 100%로 설정 */
+    margin: 0 auto; /* 중앙 정렬 */
+    box-sizing: border-box; /* 패딩 포함 */
 }
 
 .moving-icon {
@@ -168,16 +166,15 @@
 }
 
 .guideContactWrap {
-    width: 100%;
+    width: 100%; /* 100%로 설정 */
     background: #009373;
     text-align: center;
     padding: 60px;
     color: white;
-    margin: 0;
+    margin: 0 auto; /* 중앙 정렬 */
     font-size: 28px;
     position: relative;
-    margin-left: calc(-50vw + 50%);
-    margin-right: calc(-50vw + 50%);
+    box-sizing: border-box; /* 패딩 포함 */
 }
 
 .guideContactWrap h3 {
