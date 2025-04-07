@@ -13,6 +13,7 @@ import Apply2Page from "./pages/Apply2Page";
 import NoticePage from './pages/NoticePage';
 import ReviewPage from './pages/ReviewPage';
 import InquiryPage from './pages/InquiryPage';
+import PrivacyPage from "./pages/PrivacyPage";
 
 function App() {
     return (
@@ -29,6 +30,7 @@ function App() {
                 <Route path="/notice" element={<NoticePage />} />
                 <Route path="/review" element={<ReviewPage />} />
                 <Route path="/inquiry" element={<InquiryPage />} />
+                <Route path="/privacy" element={<PrivacyPage />} />
             </Routes>
             <Footer />
         </Router>

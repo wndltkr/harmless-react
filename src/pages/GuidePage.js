@@ -1,9 +1,30 @@
 import React from "react";
+import { motion } from "framer-motion";
 import "swiper/css";
 import "swiper/css/autoplay";
 import "../styles/guidePage.css";
-import Section3 from "../components/Section3";
-import Section8 from "../components/Section8";
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper/modules';
+
+const collectionItems1 = [
+    { id: 1, imgSrc: '/files/attach/images/main/t-shirt.png', name: '티셔츠' },
+    { id: 2, imgSrc: '/files/attach/images/main/vest.png', name: '조끼' },
+    { id: 3, imgSrc: '/files/attach/images/main/jacket.png', name: '자켓' },
+    { id: 4, imgSrc: '/files/attach/images/main/padding.png', name: '패딩' },
+    { id: 5, imgSrc: '/files/attach/images/main/swimsuit.png', name: '수영복' },
+    { id: 6, imgSrc: '/files/attach/images/main/shoes.png', name: '구두' },
+    { id: 7, imgSrc: '/files/attach/images/main/slippers.png', name: '슬리퍼' },
+];
+
+const collectionItems2 = [
+    { id: 8, imgSrc: '/files/attach/images/main/bag.png', name: '가방' },
+    { id: 9, imgSrc: '/files/attach/images/main/wallet.png', name: '지갑' },
+    { id: 10, imgSrc: '/files/attach/images/main/gloves.png', name: '장갑' },
+    { id: 11, imgSrc: '/files/attach/images/main/blanket.png', name: '담요' },
+    { id: 12, imgSrc: '/files/attach/images/main/doll.png', name: '인형' },
+    { id: 13, imgSrc: '/files/attach/images/main/bedding.png', name: '이불' },
+    { id: 14, imgSrc: '/files/attach/images/main/bed-cover.png', name: '침대 커버' },
+];
 
 const GuidePage = () => {
     // 상단 배너 인라인 스타일 (새 이미지와 디자인 적용)
@@ -67,9 +88,134 @@ const GuidePage = () => {
             </b>
 
             {/* 수거 가능 품목 */}
-            <Section3 />
+            <section id="section3" className="section section3 clearfix">
+                <div className="bh_wrap">
+                    <div className="section3-title-wrap">
+                        <motion.img 
+                            src="/files/attach/images/sub/check.png" 
+                            alt="체크 아이콘"
+                            className="moving-icon"
+                            initial={{ scale: 0.8 }}
+                            animate={{ scale: 1 }}
+                            transition={{
+                                duration: 0.5,
+                                repeat: Infinity,
+                                repeatType: "reverse"
+                            }}
+                        />
+                        <h3 className="guideSubTitle">수거 가능 품목</h3>
+                    </div>
+                    <div className="common_collection_wrap">
+                        <Swiper
+                            modules={[Autoplay]}
+                            autoplay={{
+                                delay: 3000,
+                                disableOnInteraction: false,
+                            }}
+                            loop={true}
+                            speed={500}
+                            slidesPerView={5}
+                            spaceBetween={0}
+                            breakpoints={{
+                                0: { slidesPerView: 3, spaceBetween: 15 },
+                                767: { slidesPerView: 4, spaceBetween: 20 },
+                                992: { slidesPerView: 5, spaceBetween: 30 },
+                            }}
+                        >
+                            {collectionItems1.map((item) => (
+                                <SwiperSlide key={item.id}>
+                                    <div className="collection_item">
+                                        <div className="item_img">
+                                            <img src={item.imgSrc} alt={item.name} />
+                                        </div>
+                                        <div className="item_name">{item.name}</div>
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    </div>
+                    <div className="common_collection_wrap" style={{ overflow: "hidden" }}>
+                        <Swiper
+                            modules={[Autoplay]}
+                            autoplay={{
+                                delay: 3000,
+                                disableOnInteraction: false,
+                            }}
+                            loop={true}
+                            speed={500}
+                            slidesPerView={5}
+                            spaceBetween={0}
+                            style={{ direction: "rtl" }}
+                            breakpoints={{
+                                0: { slidesPerView: 3, spaceBetween: 15 },
+                                767: { slidesPerView: 4, spaceBetween: 20 },
+                                992: { slidesPerView: 5, spaceBetween: 30 },
+                            }}
+                        >
+                            {collectionItems2.map((item) => (
+                                <SwiperSlide key={item.id}>
+                                    <div className="collection_item">
+                                        <div className="item_img">
+                                            <img src={item.imgSrc} alt={item.name} />
+                                        </div>
+                                        <div className="item_name">{item.name}</div>
+                                    </div>
+                                </SwiperSlide>
+                            ))}
+                        </Swiper>
+                    </div>
+                </div>
+            </section>
 
-            <Section8 />
+            <section id="section8" className="section8">
+                <div className="sec8-wrap">
+                    <div className="sec8-check-item">
+                        <div className="sec8-flex">
+                            <i className="ri-checkbox-circle-line sec8-main-color sec8-fs-30 sec8-pr-10 sec8-lh-1"></i>
+                            <b className="sec8-fs-22">각종 의류</b>
+                        </div>
+                        <div className="sec8-divider"></div>
+                        <div className="sec8-text">
+                            티셔츠, 조끼, 자켓, 패딩, 수영복, 스키복, 내복, 속옷, 양말 등
+                        </div>
+                    </div>
+                    <div className="sec8-check-item">
+                        <div className="sec8-flex">
+                            <i className="ri-checkbox-circle-line sec8-main-color sec8-fs-30 sec8-pr-10 sec8-lh-1"></i>
+                            <b className="sec8-fs-22">각종 신발</b>
+                        </div>
+                        <div className="sec8-divider"></div>
+                        <div className="sec8-text">
+                            운동화, 구두, 슬리퍼 등
+                        </div>
+                    </div>
+                    <div className="sec8-check-item">
+                        <div className="sec8-flex">
+                            <i className="ri-checkbox-circle-line sec8-main-color sec8-fs-30 sec8-pr-10 sec8-lh-1"></i>
+                            <b className="sec8-fs-22">각종 잡화</b>
+                        </div>
+                        <div className="sec8-divider"></div>
+                        <div className="sec8-text">
+                            가방, 지갑, 모자, 넥타이, 벨트, 스카프, 목도리, 장갑, 담요, 인형 등
+                        </div>
+                    </div>
+                    <div className="sec8-check-item">
+                        <div className="sec8-flex">
+                            <i className="ri-checkbox-circle-line sec8-main-color sec8-fs-30 sec8-pr-10 sec8-lh-1"></i>
+                            <b className="sec8-fs-22">이불류</b>
+                        </div>
+                        <div className="sec8-divider"></div>
+                        <div className="sec8-text">
+                            이불(극세사,차렵), 침대 커버, 소파 커버, 커튼, 카페트
+                        </div>
+                    </div>
+                    <div className="sec8-ta-r">
+                        <div className="sec8-fs-14 sec8-gray">
+                            *위 품목 모두 성인, 아동 구분 없이 수거 가능합니다.
+                        </div>
+                    </div>
+                </div>
+            </section>
 
             {/* 수거 불가능 품목 */}
             <div className="guideNoCollectionWrap">
@@ -111,6 +257,7 @@ const GuidePage = () => {
                 <a href="/inquiry" className="contactBtn">1:1 문의 바로가기</a>
             </div>
         </div>
+        
     );
 };
 

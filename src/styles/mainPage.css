@@ -1,0 +1,586 @@
+/* MainPage.css */
+.main-content {
+    width: 100%;
+    background-color: #f9f9f9;
+}
+
+/* Section1 Styles */
+.section1 {
+    position: relative;
+    padding: 150px 20px;
+    background-color: #f9f9f9;
+    overflow: hidden;
+}
+
+.common_about_wrap {
+    text-align: center;
+}
+
+.common_about p {
+    margin: 0;
+    color: #333;
+}
+
+.intro-text {
+    font-size: 2rem;
+    color: #555;
+    font-weight: 500;
+}
+
+.highlight-title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #222;
+    margin-top: 15px;
+}
+
+.spacer-lg {
+    height: 50px;
+}
+
+.description-text {
+    font-size: 2.5rem;
+    color: #333;
+    font-weight: 500;
+    line-height: 1.6;
+    white-space: nowrap;
+}
+
+.bold-text {
+    font-weight: bold;
+    color: #111;
+}
+
+.underline-effect {
+    position: relative;
+    display: inline-block;
+    font-weight: bold;
+    padding-bottom: 7px;
+    font-size: 2.5rem;
+}
+
+.underline-effect::after {
+    content: "";
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 12px;
+    background-color: rgba(0, 147, 115, 0.2);
+    border-radius: 6px;
+}
+
+.highlight-text {
+    color: #009373;
+    font-weight: bold;
+}
+
+.image-container {
+    margin-top: 80px;
+}
+
+.harmless_img img {
+    max-width: 70%;
+    margin: 0 auto;
+}
+
+.circle1, .circle2, .circle3 {
+    position: absolute;
+}
+
+.circle1 {
+    top: 8%;
+    left: 5%;
+}
+
+.circle2 {
+    bottom: 18%;
+    right: 10%;
+}
+
+.circle3 {
+    top: 45%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+/* Section2 Styles */
+.section2 {
+    padding: 80px 300px;
+    background-color: #f9f9f9;
+}
+
+.common_title {
+    text-align: center;
+    margin-bottom: 50px;
+}
+
+.icon img {
+    width: 160px !important;
+    display: block;
+    margin: 0 630px;
+    animation: bounce 2s infinite ease-in-out;
+}
+
+@keyframes bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+.big-title {
+    font-size: 3.5rem !important;
+    color: #333;
+    font-weight: bold;
+    text-align: center;
+    margin-top: 10px;
+}
+
+.highlighted-text {
+    color: #009373 !important;
+}
+
+.inconvenience_container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 35px;
+    justify-content: center;
+    align-items: stretch;
+}
+
+.large-card {
+    grid-column: span 2;
+    height: 420px;
+    width: 93%;
+    margin: 0 auto;
+}
+
+.small-card {
+    height: 420px;
+    width: 85%;
+    margin: 0 auto;
+}
+
+.inconvenience_img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 12px;
+}
+
+.overlay_text {
+    position: absolute;
+    top: 50%;
+    left: 10px;
+    width: calc(100% - 20px);
+    background: rgba(0, 0, 0, 0);
+    color: black;
+    padding: 12px;
+    border-radius: 8px;
+    text-align: left;
+    transform: translateY(-50%);
+    white-space: pre-line;
+}
+
+.overlay_text .number {
+    font-size: 2rem;
+    font-weight: bold;
+    background-color: #009373;
+    color: white;
+    padding: 10px 18px;
+    border-radius: 20px;
+    display: inline-block;
+    margin-bottom: 15px;
+}
+
+.overlay_text p {
+    font-size: 1.4rem;
+    font-weight: bold;
+    margin: 0;
+    line-height: 1.6;
+}
+
+/* Section3 Styles */
+.section3 {
+    padding: 150px 20px;
+    background-color: transparent;
+}
+
+.common_collection_wrap {
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+.collection_item {
+    text-align: center;
+    border-radius: 20px;
+    width: 280px;
+    height: 280px;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+.collection_item .item_img {
+    width: 260px;
+    height: 260px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.collection_item .item_img img {
+    width: 70%;
+    height: auto;
+    object-fit: contain;
+}
+
+.collection_item .item_name {
+    margin-top: 5px;
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #333;
+}
+
+.swiper-wrapper {
+    display: flex;
+    gap: 0px !important;
+    margin: 0px !important;
+    padding: 0px !important;
+}
+
+/* Section4 Styles */
+.section4 {
+    padding: 80px 20px;
+    background-color: #f8fdf8;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.section4_container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 50px;
+    flex-wrap: wrap;
+}
+
+.section4_daegu_map {
+    position: relative;
+    text-align: center;
+    max-width: 420px;
+}
+
+.section4_daegu_map img {
+    width: 100%;
+    height: auto;
+}
+
+.section4_pin {
+    position: absolute;
+    top: 55%;
+    left: 67%;
+    transform: translate(-50%, -50%);
+    animation: bounce 1.5s infinite;
+}
+
+.section4_text_container {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-align: left;
+    max-width: 550px;
+}
+
+.section4_title {
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+.section4_icon {
+    width: 60px;
+    margin-bottom: 15px;
+}
+
+.section4_title p {
+    font-size: 2.4rem;
+    color: #333;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.section4_line_effect {
+    font-size: 2.6rem;
+    font-weight: bold;
+    color: #009373;
+    background-color: rgba(0, 147, 115, 0.15);
+    padding: 5px 10px;
+    border-radius: 8px;
+    display: inline-block;
+}
+
+.section4_speech_bubble {
+    background-color: #009373;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 30px;
+    text-align: left;
+    font-size: 1.3rem;
+    width: 100%;
+    max-width: 500px;
+    position: relative;
+}
+
+/* Section7 Styles */
+.section7 {
+    position: relative;
+    padding: 120px 20px;
+    background-color: #009373;
+    text-align: center;
+    overflow: hidden;
+}
+
+.section7_bg_logo {
+    position: absolute;
+    top: 20px;
+    right: -50px;
+    width: 500px;
+    z-index: 0;
+}
+
+.section7_bg_logo img {
+    width: 100%;
+    height: auto;
+}
+
+.section7_container {
+    position: relative;
+    max-width: 900px;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    z-index: 1;
+}
+
+.section7_icon img {
+    width: 80px;
+    margin-bottom: 15px;
+}
+
+.section7_title {
+    font-size: 2.5rem;
+    color: white;
+    font-weight: bold;
+    line-height: 1.6;
+}
+
+.section7_highlight {
+    color: #cddc39;
+    font-size: 2.8rem;
+    background-color: rgba(205, 220, 57, 0.2);
+    padding: 5px 10px;
+    border-radius: 8px;
+}
+
+.section7_btn {
+    display: inline-block;
+    padding: 15px 30px;
+    background-color: white;
+    color: #009373;
+    font-size: 1.5rem;
+    font-weight: bold;
+    border-radius: 50px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin-top: 30px;
+}
+
+.section7_btn:hover {
+    background-color: #007a5b;
+    color: white;
+}
+
+.section7_info {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+    margin-top: 50px;
+}
+
+.section7_card {
+    display: flex;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.2);
+    padding: 20px;
+    border-radius: 10px;
+    width: 250px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.section7_card_icon {
+    font-size: 2rem;
+    color: white;
+    margin-right: 15px;
+}
+
+.section7_card_text span {
+    font-size: 1.3rem;
+    font-weight: bold;
+    color: white;
+}
+
+.section7_card_text p {
+    font-size: 1.1rem;
+    color: white;
+    margin: 5px 0 0;
+}
+
+/* Responsive Styles */
+@media only screen and (max-width: 768px) {
+    /* Section1 Responsive */
+    .section1 {
+        padding: 50px 10px;
+    }
+    .intro-text {
+        font-size: 1rem;
+    }
+    .highlight-title {
+        font-size: 2.5rem;
+    }
+    .description-text {
+        font-size: 1rem;
+    }
+    .underline-effect {
+        font-size: 1rem;
+    }
+    .mobile-break {
+        display: block;
+    }
+    .circle1 img,
+    .circle2 img,
+    .circle3 img {
+        max-width: 150px !important;
+    }
+
+    /* Section2 Responsive */
+    .section2 {
+        padding: 40px 10px;
+    }
+    .icon img {
+        width: 100px !important;
+        margin: 0 auto;
+    }
+    .inconvenience_container {
+        display: block;
+        gap: 20px;
+    }
+    .large-card, .small-card {
+        width: 100% !important;
+        height: auto !important;
+        margin: 0 auto 20px;
+        position: static !important;
+    }
+    .overlay_text {
+        position: absolute !important;
+        top: 50% !important;
+        left: 10px !important;
+        transform: translateY(-50%) !important;
+        background: none !important;
+        padding: 12px !important;
+        text-align: left !important;
+    }
+    .overlay_text .number {
+        font-size: 1.8rem !important;
+    }
+    .overlay_text p {
+        font-size: 1rem !important;
+    }
+    .big-title {
+        font-size: 2rem !important;
+    }
+
+    /* Section3 Responsive */
+    .section3 {
+        padding: 50px 15px;
+    }
+    .common_title p {
+        font-size: 1.5rem;
+    }
+    .collection_item {
+        width: 150px;
+        height: 150px;
+    }
+    .collection_item .item_img {
+        width: 100px;
+        height: 150px;
+    }
+
+    /* Section4 Responsive */
+    .section4_title {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        margin: 0 auto;
+    }
+    .section4_title .section4_icon {
+        display: block;
+        width: auto;
+        margin: 0 auto 15px auto;
+    }
+    .section4_title p {
+        font-size: 1.3rem !important;
+        text-align: center;
+        line-height: 1.2;
+        margin: 0 auto;
+    }
+    .section4_line_effect {
+        font-size: 1.3rem !important;
+    }
+    .section4_speech_bubble {
+        max-width: 90% !important;
+        margin: 20px auto 0 auto;
+        font-size: 1rem;
+    }
+
+    /* Section7 Responsive */
+    .section7 {
+        padding: 60px 10px;
+    }
+    .section7_title {
+        font-size: 2rem;
+        margin: 0 0 10px 0;
+    }
+    .section7_btn {
+        padding: 10px 20px;
+        font-size: 1.2rem;
+        margin-top: 20px;
+    }
+    .section7_info {
+        flex-direction: column;
+        gap: 20px;
+        margin-top: 30px;
+    }
+    .section7_card {
+        width: 200px;
+        padding: 15px;
+    }
+    .section7_bg_logo {
+        width: 200px;
+        top: 10px;
+        right: -20px;
+    }
+} 
