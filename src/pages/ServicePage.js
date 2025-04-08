@@ -1,52 +1,41 @@
-import React from "react";
+import React, { useState } from 'react';
+import { motion } from 'framer-motion';
+import DaeguMap from '../components/DaeguMap';
 import "../styles/servicePage.css";
 
 const ServicePage = () => {
+    const [selectedArea, setSelectedArea] = useState('main');
+
+    const areaInfo = {
+        main: {
+            title: '서비스 지역 안내',
+            description: '아래 지도에서 서비스 지역을 선택해주세요.'
+        },
+        daegu: {
+            title: '대구광역시',
+            description: '대구광역시 전 지역 서비스 제공'
+        }
+    };
+
+    const handleAreaClick = (area) => {
+        setSelectedArea(area);
+    };
+
     return (
-        <div className="service-container">
-            <div className="sub-top-banner">
-                <div className="banner-content">
-                    <span>서비스 지역</span>
-                    <div className="banner-line"></div>
+        <div className="service-page">
+            <div className="service-content">
+                <div className="map-container">
+                    <DaeguMap onAreaClick={handleAreaClick} />
                 </div>
-            </div>
-            <div className="content-wrap">
-                <div className="service-map-wrap">
-                    <div className="service-area">
-                        <div className="daegu-map">
-                            <img src="/files/attach/images/sub/daegu_map.png" alt="대구" />
-                            <div className="map-info">
-                                <h2>대구</h2>
-                                <p>(군위제외)</p>
-                                <span>방문 수거 서비스 가능 지역</span>
-                            </div>
-                        </div>
-                        <div className="other-map">
-                            <div className="map-list">
-                                <img src="/files/attach/images/sub/emoticon.png" alt="지도 아이콘" />
-                                <div className="region-list">
-                                    <p>인천광역시</p>
-                                    <p>서울특별시</p>
-                                    <p>경기도</p>
-                                    <p>강원도</p>
-                                    <p>경상남도</p>
-                                    <p>경상북도</p>
-                                    <p>광주광역시</p>
-                                    <p>전라북도</p>
-                                    <p>전라남도</p>
-                                    <p>충청북도</p>
-                                    <p>충청남도</p>
-                                    <p>대전광역시</p>
-                                    <p>울산광역시</p>
-                                    <p>부산광역시</p>
-                                    <p>제주도</p>
-                                </div>
-                                <p className="service-info">택배 수거 서비스 준비중.</p>
-                                <p className="service-note">저희 무해는 대한민국 전역이 방문 수거 서비스 가능 지역이 되도록 열심히 나아가겠습니다.</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
+                <motion.div 
+                    className="area-info"
+                    initial={{ opacity: 0, x: 20 }}
+                    animate={{ opacity: 1, x: 0 }}
+                    transition={{ duration: 0.5 }}
+                >
+                    <h2>{areaInfo[selectedArea]?.title || '지역 정보'}</h2>
+                    <p>{areaInfo[selectedArea]?.description || '지역을 선택해주세요.'}</p>
+                </motion.div>
             </div>
         </div>
     );
