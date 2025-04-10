@@ -196,7 +196,8 @@
 /* 반응형 스타일 */
 @media (max-width: 768px) {
     .inquiry-banner {
-        height: 200px;
+        height: 200px !important;
+        width: calc(100% - 40px) !important;
     }
 
     .inquiry-title {
@@ -229,4 +230,26 @@
     font-family: 'Pretendard', sans-serif;
     width: 95%;
     max-width: 1800px;
+}
+
+.inquiryBanner {
+    width: 95%;
+    max-width: 1800px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 0 auto 3rem;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    .inquiryBanner {
+        height: 200px !important;
+        width: calc(100% - 40px) !important;
+    }
 } 

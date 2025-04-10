@@ -7,16 +7,19 @@ const ApplyPage = () => {
     // 상단 배너 인라인 스타일
     const bannerStyle = {
         background: "url('/files/attach/images/106/0e1b3587a1741f541b78bbd83d40e0c5.jpg') no-repeat center center",
-        backgroundSize: "cover",
-        height: "400px",
-        borderRadius: "20px",
-        display: "flex",
-        flexDirection: "column",
-        justifyContent: "center",
-        alignItems: "center",
-        color: "white",
-        width: "94vw", // 전체 너비보다 조금 줄임
-        marginLeft: "calc(50% - 47vw)", // 95vw의 절반은 47.5vw: 중앙 정렬 효과 적용
+        backgroundSize: 'cover',
+        backgroundPosition: 'center',
+        height: '400px',
+        width: '95%',
+        maxWidth: '1800px',
+        margin: '0 auto',
+        display: 'flex',
+        alignItems: 'center',
+        justifyContent: 'center',
+        marginBottom: '20px',
+        position: 'relative',
+        borderRadius: '20px',
+        overflow: 'hidden'
     };
 
     const optionBoxStyle = {

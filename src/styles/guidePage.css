@@ -8,11 +8,28 @@
 }
 
 .guideBanner {
-    margin-bottom: 40px;
+    width: 100%;
+    max-width: 1800px;
+    height: 150px;
+    margin: 0 auto 3rem;
+    position: relative;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #003B2E;
+    color: white;
+    box-sizing: border-box;
+    border-radius: 10px;
 }
 
 .guideBannerContent {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
     text-align: center;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .guideBannerTitle {
@@ -31,6 +48,8 @@
 .guidePriceWrap {
     text-align: center;
     margin-top: 40px;
+    padding: 0 20px;
+    box-sizing: border-box;
 }
 
 .guideSubTitle {
@@ -44,6 +63,7 @@
     display: flex;
     justify-content: center;
     gap: 20px;
+    flex-wrap: wrap;
 }
 
 .priceItem {
@@ -53,6 +73,7 @@
     width: 550px;
     font-size: 18px;
     border: 1px solid #ccc;
+    box-sizing: border-box;
 }
 
 .priceTitle {
@@ -78,6 +99,7 @@
     max-width: 1200px;
     margin: 50px auto 0;
     padding: 0 20px;
+    flex-wrap: wrap;
 }
 
 .guide_check_wrap,
@@ -91,6 +113,7 @@
     display: flex;
     flex-direction: column;
     align-items: center;
+    box-sizing: border-box;
 }
 
 .guide-check-box {
@@ -101,6 +124,7 @@
     align-items: center;
     margin: 5px auto;
     width: 1120px;
+    box-sizing: border-box;
 }
 
 .guide-text-large {
@@ -117,9 +141,9 @@
     padding: 30px;
     background: #eee;
     position: relative;
-    width: 100%; /* 100%로 설정 */
-    margin: 0 auto; /* 중앙 정렬 */
-    box-sizing: border-box; /* 패딩 포함 */
+    width: 100%;
+    margin: 0 auto;
+    box-sizing: border-box;
 }
 
 .moving-icon {
@@ -136,6 +160,8 @@
 
 .noCollectionList {
     padding: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
 }
 
 .noCollectionItem {
@@ -144,6 +170,7 @@
     border-radius: 8px;
     margin-bottom: 15px;
     padding: 15px;
+    box-sizing: border-box;
 }
 
 .noCollectionDivider {
@@ -166,15 +193,15 @@
 }
 
 .guideContactWrap {
-    width: 100%; /* 100%로 설정 */
+    width: 100%;
     background: #009373;
     text-align: center;
     padding: 60px;
     color: white;
-    margin: 0 auto; /* 중앙 정렬 */
+    margin: 0 auto;
     font-size: 28px;
     position: relative;
-    box-sizing: border-box; /* 패딩 포함 */
+    box-sizing: border-box;
 }
 
 .guideContactWrap h3 {
@@ -199,41 +226,12 @@
     margin-top: 30px;
 }
 
-@media only screen and (max-width: 768px) {
-    .guide_check_wrap,
-    .mt-30,
-    .mb-10 {
-        width: calc(100% - 30px);
-        margin: 1px 15px !important;
-    }
-    
-    .guide-check-box {
-        width: 100%;
-        padding: 15px;
-    }
-
-    .guideNoCollectionWrap {
-        padding: 20px;
-    }
-
-    .guideContactWrap {
-        padding: 30px;
-        font-size: 20px;
-    }
-}
-
-/* guide-container */
-.guide-container {
-    width: 100%;
-    padding: 20px 0;
-    background-color: #f9f9f9;
-}
-
 /* Section3 Styles */
 .section3 {
     padding: 80px 20px;
     background-color: #fff;
     text-align: center;
+    box-sizing: border-box;
 }
 
 .guide-content {
@@ -305,6 +303,7 @@
 /* Section8 Styles */
 .section8 {
     padding: 80px 20px;
+    box-sizing: border-box;
 }
 
 .sec8-wrap {
@@ -318,6 +317,7 @@
     padding: 20px;
     margin-bottom: 15px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    box-sizing: border-box;
 }
 
 .sec8-flex {
@@ -370,25 +370,6 @@
     color: #999;
 }
 
-/* Responsive Styles */
-@media screen and (max-width: 768px) {
-    .section8 {
-        padding: 40px 15px;
-    }
-
-    .sec8-check-item {
-        padding: 15px;
-    }
-
-    .sec8-fs-22 {
-        font-size: 18px;
-    }
-
-    .sec8-fs-14 {
-        font-size: 12px;
-    }
-}
-
 .section3-title-wrap {
     text-align: center;
     margin-bottom: 40px;
@@ -406,6 +387,7 @@
 .section3 {
     padding: 80px 20px;
     background-color: #fff;
+    box-sizing: border-box;
 }
 
 .section3 .common_title {
@@ -418,12 +400,167 @@
     margin: 20px 0;
 }
 
+/* Responsive styles */
+@media only screen and (max-width: 1200px) {
+    .guide_check_wrap,
+    .mt-30,
+    .mb-10,
+    .guide-check-box {
+        width: 95%;
+    }
+    
+    .priceItem {
+        width: 45%;
+    }
+}
+
 @media only screen and (max-width: 768px) {
+    .guideBanner {
+        height: 200px !important;
+        width: calc(100% - 40px) !important;
+        margin: 0 auto 2rem;
+    }
+    
+    .guideBannerTitle {
+        font-size: 24px;
+    }
+    
+    .guideBannerUnderline {
+        width: 40px;
+        height: 2px;
+        margin: 8px auto;
+    }
+    
+    .guideSubTitle {
+        font-size: 32px;
+    }
+    
+    .priceList {
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .priceItem {
+        width: 100%;
+        margin-bottom: 20px;
+        padding: 0;
+    }
+    
+    .priceTitle {
+        width: 100%;
+        margin: 0 0 10px 0;
+        border-radius: 10px 10px 0 0;
+        font-size: 18px;
+        height: 50px;
+    }
+    
+    .guide_check_wrap,
+    .mt-30,
+    .mb-10,
+    .guide-check-box {
+        width: calc(100% - 30px);
+        margin: 1px 15px !important;
+    }
+    
+    .guide-check-box {
+        padding: 15px;
+    }
+    
+    .guide-text-large {
+        font-size: 16px;
+    }
+    
+    .guideNoCollectionWrap {
+        padding: 20px;
+    }
+    
+    .noCollectionTitle {
+        font-size: 16px;
+    }
+    
+    .noCollectionDesc {
+        font-size: 14px;
+    }
+    
+    .guideContactWrap {
+        padding: 30px;
+        font-size: 20px;
+    }
+    
+    .guideContactWrap h3 {
+        font-size: 24px;
+    }
+    
+    .guideContactWrap p {
+        font-size: 20px;
+    }
+    
+    .contactBtn {
+        font-size: 24px;
+        padding: 10px 20px;
+    }
+    
     .section3-title-wrap .guideSubTitle {
         font-size: 32px;
     }
-
+    
     .section3 .common_title p {
         font-size: 24px;
+    }
+    
+    .section8 {
+        padding: 40px 15px;
+    }
+    
+    .sec8-check-item {
+        padding: 15px;
+    }
+    
+    .sec8-fs-22 {
+        font-size: 18px;
+    }
+    
+    .sec8-fs-14 {
+        font-size: 12px;
+    }
+}
+
+@media only screen and (max-width: 480px) {
+    .guideBanner {
+        height: 180px !important;
+    }
+    
+    .guideBannerTitle {
+        font-size: 22px;
+    }
+    
+    .guideSubTitle {
+        font-size: 28px;
+    }
+    
+    .priceItem {
+        padding: 0;
+        margin: 0 auto 20px;
+        width: calc(100% - 30px);
+    }
+    
+    .priceTitle {
+        width: 100%;
+        margin: 0 0 10px 0;
+        font-size: 18px;
+        height: 50px;
+    }
+    
+    .guideContactWrap h3 {
+        font-size: 22px;
+    }
+    
+    .guideContactWrap p {
+        font-size: 18px;
+    }
+    
+    .contactBtn {
+        font-size: 20px;
+        padding: 8px 16px;
     }
 }

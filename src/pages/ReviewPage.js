@@ -86,15 +86,15 @@ const ReviewPage = () => {
         <div className="review-page">
 
             {/* 상단 배너 */}
-            <div className="review-banner" style={bannerStyle}>
+            <div className="noticeBanner" style={bannerStyle}>
                 <div style={contentStyle}>
-                    <h1 className="review-title">이용 후기</h1>
-                    <div className="review-divider"></div>
+                    <h1 className="notice-title">이용후기</h1>
+                    <div className="notice-divider"></div>
                 </div>
-                <div style={linkContainerStyle}>
-                    <a href="/notice" style={linkItemStyle}>공지사항</a>
-                    <a href="/inquiry" style={linkItemStyle}>1:1 문의</a>
-                    <a href="/review" style={linkItemStyle}>이용후기</a>
+                <div className="notice-link-container">
+                    <a href="/notice" className="notice-link-item">공지사항</a>
+                    <a href="/inquiry" className="notice-link-item">1:1 문의</a>
+                    <a href="/review" className="notice-link-item">이용후기</a>
                 </div>
             </div>
 

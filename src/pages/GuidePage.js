@@ -41,19 +41,25 @@ const GuidePage = () => {
     const noCollectionInView = useInView(noCollectionRef, { once: true, amount: 0.3 });
     const contactInView = useInView(contactRef, { once: true, amount: 0.3 });
 
-    // 상단 배너 인라인 스타일 (새 이미지와 디자인 적용)
+    // 배너 스타일
     const bannerStyle = {
-        background: "url('/files/attach/images/106/893ada4896cce8c524983e6025a10144.jpg') no-repeat center center",
+        backgroundImage: "url('/files/attach/images/106/893ada4896cce8c524983e6025a10144.jpg')",
         backgroundSize: "cover",
+        backgroundPosition: "center",
+        backgroundRepeat: "no-repeat",
+        width: "100%",
+        maxWidth: "1800px",
         height: "400px",
-        borderRadius: "20px",
+        margin: "0 auto 3rem",
+        position: "relative",
+        overflow: "hidden",
         display: "flex",
-        flexDirection: "column",
         justifyContent: "center",
         alignItems: "center",
+        backgroundColor: "#003B2E",
         color: "white",
-        width: "94vw", // 전체 너비보다 조금 줄임
-        marginLeft: "calc(50% - 47vw)", // 중앙 정렬 효과 적용
+        boxSizing: "border-box",
+        borderRadius: "10px"
     };
 
     return (
@@ -154,7 +160,8 @@ const GuidePage = () => {
                             slidesPerView={5}
                             spaceBetween={0}
                             breakpoints={{
-                                0: { slidesPerView: 3, spaceBetween: 15 },
+                                0: { slidesPerView: 2, spaceBetween: 10 },
+                                480: { slidesPerView: 3, spaceBetween: 15 },
                                 767: { slidesPerView: 4, spaceBetween: 20 },
                                 992: { slidesPerView: 5, spaceBetween: 30 },
                             }}
@@ -184,7 +191,8 @@ const GuidePage = () => {
                             spaceBetween={0}
                             style={{ direction: "rtl" }}
                             breakpoints={{
-                                0: { slidesPerView: 3, spaceBetween: 15 },
+                                0: { slidesPerView: 2, spaceBetween: 10 },
+                                480: { slidesPerView: 3, spaceBetween: 15 },
                                 767: { slidesPerView: 4, spaceBetween: 20 },
                                 992: { slidesPerView: 5, spaceBetween: 30 },
                             }}

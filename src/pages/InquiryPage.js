@@ -50,7 +50,11 @@ const InquiryPage = () => {
         marginBottom: '20px',
         position: 'relative',
         borderRadius: '20px',
-        overflow: 'hidden'
+        overflow: 'hidden',
+        '@media (max-width: 768px)': {
+            height: '200px',
+            width: '90%'
+        }
     };
 
     const contentStyle = {
@@ -85,20 +89,20 @@ const InquiryPage = () => {
     return (
         <div className="inquiry-page">
             {/* 상단 배너 */}
-            <div className="inquiry-banner" style={bannerStyle}>
+            <div className="noticeBanner" style={bannerStyle}>
                 <div style={contentStyle}>
-                    <h1 className="inquiry-title">1:1 문의</h1>
-                    <div className="inquiry-divider"></div>
+                    <h1 className="notice-title">1:1 문의</h1>
+                    <div className="notice-divider"></div>
                 </div>
-                <div style={linkContainerStyle}>
-                    <a href="/notice" style={linkItemStyle}>공지사항</a>
-                    <a href="/inquiry" style={linkItemStyle}>1:1 문의</a>
-                    <a href="/review" style={linkItemStyle}>이용후기</a>
+                <div className="notice-link-container">
+                    <a href="/notice" className="notice-link-item">공지사항</a>
+                    <a href="/inquiry" className="notice-link-item">1:1 문의</a>
+                    <a href="/review" className="notice-link-item">이용후기</a>
                 </div>
             </div>
-                        {/* 메인 제목 */}
-                        <h1 className="page-main-title animated-title">1:1 문의</h1>
 
+            {/* 메인 제목 */}
+            <h1 className="page-main-title animated-title">1:1 문의</h1>
 
             {/* 게시판 컨테이너 */}
             <div className="inquiry-container">

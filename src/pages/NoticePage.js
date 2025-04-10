@@ -48,7 +48,12 @@ const NoticePage = () => {
         marginBottom: '20px',
         position: 'relative',
         borderRadius: '20px',
-        overflow: 'hidden'
+        overflow: 'hidden',
+        '@media (max-width: 768px)': {
+            height: '200px',
+            width: 'calc(100% - 40px)',
+            margin: '20px auto'
+        }
     };
 
     const linkContainerStyle = {
@@ -60,36 +65,47 @@ const NoticePage = () => {
         padding: '20px 0',
         display: 'flex',
         justifyContent: 'center',
-        gap: '30px'
+        gap: '30px',
+        '@media (max-width: 768px)': {
+            padding: '12px 0',
+            gap: '15px'
+        }
     };
 
     const linkItemStyle = {
-        color: 'white',
+        color: '#fff',
         textDecoration: 'none',
-        fontSize: '20px',
-        fontWeight: 'bold',
-        padding: '10px 20px',
-        transition: 'color 0.3s'
+        fontSize: '18px',
+        fontWeight: '500',
+        transition: 'opacity 0.3s',
+        ':hover': {
+            opacity: 0.8
+        },
+        '@media (max-width: 768px)': {
+            fontSize: '14px',
+            padding: '5px 10px'
+        }
     };
 
     const contentStyle = {
+        position: 'relative',
+        zIndex: 2,
         textAlign: 'center',
-        color: 'white',
-        padding: '20px'
+        color: 'white'
     };
 
     return (
         <div className="notice-page">
             {/* 상단 배너 */}
-            <div className="notice-banner" style={bannerStyle}>
+            <div className="noticeBanner" style={bannerStyle}>
                 <div style={contentStyle}>
                     <h1 className="notice-title">공지사항</h1>
                     <div className="notice-divider"></div>
                 </div>
-                <div style={linkContainerStyle}>
-                    <a href="/notice" style={linkItemStyle}>공지사항</a>
-                    <a href="/inquiry" style={linkItemStyle}>1:1 문의</a>
-                    <a href="/review" style={linkItemStyle}>이용후기</a>
+                <div className="notice-link-container">
+                    <a href="/notice" className="notice-link-item">공지사항</a>
+                    <a href="/inquiry" className="notice-link-item">1:1 문의</a>
+                    <a href="/review" className="notice-link-item">이용후기</a>
                 </div>
             </div>
 

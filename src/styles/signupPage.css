@@ -1,0 +1,648 @@
+/* 전체 레이아웃 */
+.body {
+  min-height: 100vh;
+  background-color: #f5f5f5;
+  font-family: 'Noto Sans KR', sans-serif;
+  box-sizing: border-box;
+}
+
+/* 배너 스타일 */
+.sub-top-banner {
+  text-align: center;
+  background-size: cover;
+  background-position: center;
+  height: 400px;
+  width: 95%;
+  max-width: 1800px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 20px;
+  position: relative;
+  border-radius: 20px;
+  overflow: hidden;
+}
+
+/* 컨텐츠 영역 */
+.content_wrap {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px 50px;
+  box-sizing: border-box;
+}
+
+.content {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  padding: 30px;
+  box-sizing: border-box;
+}
+
+/* 회원가입 폼 */
+.signup_wrap {
+  max-width: 800px;
+  margin: 0 auto;
+  box-sizing: border-box;
+}
+
+.module_title {
+  font-size: 28px;
+  font-weight: 600;
+  color: #333;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* 폼 요소 스타일 */
+.control-group {
+  margin-bottom: 25px;
+  box-sizing: border-box;
+}
+
+.label_text {
+  display: block;
+  font-size: 16px;
+  font-weight: 500;
+  margin-bottom: 8px;
+  color: #333;
+}
+
+.required {
+  color: #e74c3c;
+  margin-left: 3px;
+}
+
+.controls {
+  position: relative;
+  box-sizing: border-box;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="password"],
+input[type="tel"] {
+  width: 100%;
+  padding: 12px 15px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  font-size: 16px;
+  transition: border-color 0.3s;
+  box-sizing: border-box;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="password"]:focus,
+input[type="tel"]:focus {
+  border-color: #003B2E;
+  outline: none;
+}
+
+.help-inline {
+  font-size: 14px;
+  color: #666;
+  margin-top: 5px;
+}
+
+.error-message {
+  color: #e74c3c;
+  font-size: 14px;
+  margin-top: 5px;
+}
+
+/* 약관 동의 섹션 */
+.agreement {
+  margin-bottom: 30px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  overflow: hidden;
+  box-sizing: border-box;
+}
+
+.agreement .title {
+  background-color: #f8f8f8;
+  padding: 15px;
+  font-size: 16px;
+  font-weight: 500;
+  border-bottom: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+.agreement .text {
+  padding: 15px;
+  max-height: 300px;
+  overflow-y: auto;
+  line-height: 1.6;
+  font-size: 14px;
+  color: #444;
+  border: 1px solid #eee;
+  margin: 10px;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+/* 스크롤바 스타일링 */
+.agreement .text::-webkit-scrollbar {
+  width: 8px;
+}
+
+.agreement .text::-webkit-scrollbar-track {
+  background: #f1f1f1;
+  border-radius: 4px;
+}
+
+.agreement .text::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 4px;
+}
+
+.agreement .text::-webkit-scrollbar-thumb:hover {
+  background: #999;
+}
+
+/* 약관 내부 요소 스타일링 */
+.agreement .text h4 {
+  font-size: 16px;
+  margin: 15px 0 10px;
+  color: #333;
+}
+
+.agreement .text h5 {
+  font-size: 15px;
+  margin: 12px 0 8px;
+  color: #444;
+}
+
+.agreement .text p {
+  margin-bottom: 10px;
+  line-height: 1.6;
+}
+
+.agreement .text ul {
+  margin: 10px 0;
+  padding-left: 20px;
+}
+
+.agreement .text li {
+  margin-bottom: 5px;
+  line-height: 1.5;
+}
+
+.agreement .confirm {
+  padding: 15px;
+  background-color: #f8f8f8;
+  border-top: 1px solid #ddd;
+  box-sizing: border-box;
+}
+
+/* 라디오 버튼 스타일 */
+.custom_radio {
+  display: inline-block;
+  margin-right: 20px;
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.custom_radio input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.custom_radio_btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 50%;
+}
+
+.custom_radio input:checked ~ .custom_radio_btn {
+  background-color: #003B2E;
+  border-color: #003B2E;
+}
+
+.custom_radio input:checked ~ .custom_radio_btn:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 5px;
+  left: 5px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: white;
+}
+
+/* 체크박스 스타일 */
+.custom_checkbox {
+  display: inline-block;
+  margin-right: 20px;
+  position: relative;
+  padding-left: 25px;
+  cursor: pointer;
+  box-sizing: border-box;
+}
+
+.custom_checkbox input {
+  position: absolute;
+  opacity: 0;
+  cursor: pointer;
+}
+
+.custom_checkbox_btn {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 18px;
+  width: 18px;
+  background-color: #fff;
+  border: 1px solid #ddd;
+  border-radius: 3px;
+}
+
+.custom_checkbox input:checked ~ .custom_checkbox_btn {
+  background-color: #003B2E;
+  border-color: #003B2E;
+}
+
+.custom_checkbox input:checked ~ .custom_checkbox_btn:after {
+  content: "";
+  position: absolute;
+  display: block;
+  top: 2px;
+  left: 6px;
+  width: 6px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+/* 주소 검색 */
+.krZip {
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+
+.krzip-postcode-wrap,
+.krzip-address-wrap,
+.krzip-detailAddress-wrap {
+  margin-bottom: 10px;
+  box-sizing: border-box;
+}
+
+.krzip-postcode-wrap label,
+.krzip-address-wrap label,
+.krzip-detailAddress-wrap label {
+  display: block;
+  margin-bottom: 5px;
+  font-size: 14px;
+  color: #666;
+}
+
+.krzip-postcode,
+.krzip-roadAddress,
+.krzip-jibunAddress,
+.krzip-extraAddress,
+.krzip-detailAddress {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  margin-bottom: 5px;
+  box-sizing: border-box;
+}
+
+.krzip-search {
+  background-color: #003B2E;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: background-color 0.3s;
+  box-sizing: border-box;
+}
+
+.krzip-search:hover {
+  background-color: #002a20;
+}
+
+/* 버튼 영역 */
+.btnArea {
+  text-align: center;
+  margin-top: 40px;
+  box-sizing: border-box;
+}
+
+.btn {
+  background-color: #003B2E;
+  color: white;
+  border: none;
+  padding: 12px 30px;
+  font-size: 16px;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s;
+  box-sizing: border-box;
+}
+
+.btn:hover {
+  background-color: #002a20;
+}
+
+.btn_mobile_max {
+  width: 100%;
+  max-width: 300px;
+  box-sizing: border-box;
+}
+
+/* 모바일 반응형 스타일 */
+@media screen and (max-width: 768px) {
+  .sub-top-banner {
+    height: 200px;
+    width: 90%;
+    margin: 10px auto;
+  }
+
+  .sub-top-banner h1 {
+    font-size: 24px;
+  }
+
+  .content_wrap {
+    padding: 0 15px;
+  }
+
+  .content {
+    padding: 20px;
+  }
+
+  .signup_wrap {
+    padding: 0;
+  }
+
+  .module_title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+
+  .control-group {
+    margin-bottom: 20px;
+  }
+
+  .label_text {
+    font-size: 14px;
+    margin-bottom: 6px;
+  }
+
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"] {
+    padding: 10px 12px;
+    font-size: 14px;
+  }
+
+  .help-inline {
+    font-size: 12px;
+  }
+
+  .error-message {
+    font-size: 12px;
+  }
+
+  .agreement {
+    margin-bottom: 20px;
+  }
+
+  .agreement .title {
+    padding: 12px;
+    font-size: 14px;
+  }
+
+  .agreement .text {
+    padding: 12px;
+    max-height: 200px;
+    font-size: 12px;
+    margin: 8px;
+  }
+
+  .agreement .text h4 {
+    font-size: 14px;
+    margin: 12px 0 8px;
+  }
+
+  .agreement .text h5 {
+    font-size: 13px;
+    margin: 10px 0 6px;
+  }
+
+  .agreement .text p {
+    margin-bottom: 8px;
+  }
+
+  .agreement .confirm {
+    padding: 12px;
+  }
+
+  .custom_radio,
+  .custom_checkbox {
+    padding-left: 22px;
+    font-size: 14px;
+  }
+
+  .custom_radio_btn,
+  .custom_checkbox_btn {
+    height: 16px;
+    width: 16px;
+  }
+
+  .krZip {
+    margin-top: 8px;
+  }
+
+  .krzip-postcode-wrap label,
+  .krzip-address-wrap label,
+  .krzip-detailAddress-wrap label {
+    font-size: 12px;
+    margin-bottom: 4px;
+  }
+
+  .btnArea {
+    margin-top: 30px;
+  }
+
+  .btn {
+    padding: 12px 20px;
+    font-size: 14px;
+  }
+}
+
+/* 작은 모바일 화면 */
+@media (max-width: 480px) {
+  .content_wrap {
+    padding: 0 10px 30px;
+  }
+  
+  .content {
+    padding: 15px;
+  }
+  
+  .module_title {
+    font-size: 22px;
+    margin-bottom: 15px;
+  }
+  
+  .control-group {
+    margin-bottom: 15px;
+  }
+  
+  .label_text {
+    font-size: 14px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"] {
+    padding: 8px 10px;
+    font-size: 14px;
+    width: 100%;
+  }
+  
+  .help-inline {
+    font-size: 12px;
+  }
+  
+  .error-message {
+    font-size: 12px;
+  }
+  
+  .agreement .title {
+    padding: 10px;
+    font-size: 14px;
+  }
+  
+  .agreement .text {
+    padding: 10px;
+    max-height: 200px;
+    font-size: 12px;
+    margin: 6px;
+  }
+  
+  .agreement .text h4 {
+    font-size: 14px;
+    margin: 12px 0 8px;
+  }
+  
+  .agreement .text h5 {
+    font-size: 13px;
+    margin: 10px 0 6px;
+  }
+  
+  .agreement .text p {
+    margin-bottom: 8px;
+  }
+  
+  .agreement .confirm {
+    padding: 10px;
+  }
+  
+  .custom_radio {
+    margin-right: 10px;
+    padding-left: 20px;
+    font-size: 13px;
+  }
+  
+  .custom_radio_btn {
+    height: 14px;
+    width: 14px;
+  }
+  
+  .custom_radio input:checked ~ .custom_radio_btn:after {
+    top: 3px;
+    left: 3px;
+    width: 6px;
+    height: 6px;
+  }
+  
+  .krzip-postcode-wrap label,
+  .krzip-address-wrap label,
+  .krzip-detailAddress-wrap label {
+    font-size: 13px;
+  }
+  
+  .krzip-postcode,
+  .krzip-roadAddress,
+  .krzip-jibunAddress,
+  .krzip-extraAddress,
+  .krzip-detailAddress {
+    padding: 7px 9px;
+    font-size: 13px;
+    width: 100%;
+  }
+  
+  .krzip-search {
+    padding: 7px 10px;
+    font-size: 12px;
+  }
+  
+  .btn {
+    padding: 9px 15px;
+    font-size: 14px;
+  }
+  
+  .btnArea {
+    margin-top: 30px;
+  }
+}
+
+/* 태블릿 화면 */
+@media (min-width: 769px) and (max-width: 1024px) {
+  .content_wrap {
+    padding: 0 15px 40px;
+  }
+  
+  .content {
+    padding: 25px;
+  }
+  
+  .module_title {
+    font-size: 26px;
+    margin-bottom: 25px;
+  }
+  
+  .agreement .text {
+    max-height: 280px;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="password"],
+  input[type="tel"] {
+    width: 100%;
+  }
+  
+  .krzip-postcode,
+  .krzip-roadAddress,
+  .krzip-jibunAddress,
+  .krzip-extraAddress,
+  .krzip-detailAddress {
+    width: 100%;
+  }
+}
+
+/* 모든 요소에 box-sizing 적용 */
+* {
+  box-sizing: border-box;
+} 

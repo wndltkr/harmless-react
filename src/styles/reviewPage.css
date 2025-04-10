@@ -179,8 +179,8 @@
 /* 반응형 스타일 */
 @media (max-width: 768px) {
     .review-banner {
-        height: 150px;
-        width: calc(100% - 40px);
+        height: 200px !important;
+        width: calc(100% - 40px) !important;
     }
 
     .review-title {
@@ -197,6 +197,11 @@
         padding: 6px 10px;
         font-size: 0.875rem;
     }
+
+    .reviewBanner {
+        height: 200px !important;
+        width: calc(100% - 40px) !important;
+    }
 }
 
 .page-main-title {
@@ -208,4 +213,26 @@
     font-family: 'Pretendard', sans-serif;
     width: 95%;
     max-width: 1800px;
+}
+
+.reviewBanner {
+    width: 95%;
+    max-width: 1800px;
+    text-align: center;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: white;
+    margin: 0 auto 3rem;
+    height: 150px;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Responsive styles */
+@media only screen and (max-width: 768px) {
+    .reviewBanner {
+        height: 200px !important;
+        width: calc(100% - 40px) !important;
+    }
 } 

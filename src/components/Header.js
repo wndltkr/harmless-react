@@ -41,7 +41,7 @@ const Header = () => {
                 <div className="auth_menu desktop-auth">
                     <a href="/index.php?mid=index&act=dispMemberLoginForm">로그인</a>
                     <span className="divider">|</span>
-                    <a href="/index.php?mid=index&act=dispMemberSignUpForm">회원가입</a>
+                    <a href="/signup">회원가입</a>
                 </div>
             </div>
 
@@ -53,7 +53,7 @@ const Header = () => {
                         <a href="/index.php?mid=index&act=dispMemberLoginForm" className="login-btn">
                             🔒 로그인
                         </a>
-                        <a href="/index.php?mid=index&act=dispMemberSignUpForm" className="signup-btn">
+                        <a href="/signup" className="signup-btn">
                             👤 회원가입
                         </a>
                     </div>
