@@ -1,7 +1,9 @@
 /* MainPage.css */
-.main-content {
-    width: 100%;
-    background-color: #f9f9f9;
+.main-page {
+    padding-top: 5px; /* 헤더 높이 + 여백 */
+    min-height: calc(100vh - 100px); /* 전체 높이에서 헤더와 푸터 높이를 뺀 값 */
+    position: relative;
+    z-index: 1;
 }
 
 /* Section1 Styles */

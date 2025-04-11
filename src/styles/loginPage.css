@@ -1,0 +1,188 @@
+/* 로그인 컨테이너 스타일 */
+.login-container {
+    max-width: 500px;
+    margin: 0 auto;
+    padding: 40px;
+    background-color: white;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    margin-bottom: 30px;
+}
+
+.login-title {
+    font-size: 28px;
+    text-align: center;
+    margin-bottom: 30px;
+    color: #333;
+}
+
+/* 폼 스타일 */
+.control-group {
+    margin-bottom: 20px;
+}
+
+.uid_wrap, label {
+    display: block;
+    margin-bottom: 15px;
+}
+
+.label_text {
+    display: block;
+    margin-bottom: 8px;
+    color: #666;
+    font-size: 14px;
+}
+
+.required {
+    color: #ff4444;
+}
+
+input[type="email"],
+input[type="password"] {
+    width: 100%;
+    padding: 12px;
+    font-size: 16px;
+}
+
+input[type="email"]:focus,
+input[type="password"]:focus {
+    border-color: #4a90e2;
+    outline: none;
+}
+
+/* 자동 로그인 스타일 */
+.btn_login_wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.custom_radio {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+}
+
+.custom_radio_btn {
+    width: 18px;
+    height: 18px;
+    display: inline-block;
+    position: relative;
+}
+
+input[type="checkbox"]:checked + label .custom_radio_btn::after {
+    content: '';
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 10px;
+    height: 10px;
+    background-color: #4a90e2;
+    border-radius: 50%;
+}
+
+/* 경고 메시지 스타일 */
+.warning {
+    background-color: #fff3cd;
+    color: #856404;
+    padding: 15px;
+    font-size: 14px;
+    line-height: 1.5;
+}
+
+/* 소셜 로그인 스타일 */
+.social-login-container {
+    margin-top: 20px;
+    padding-top: 20px;
+    border-top: 1px solid #eee;
+}
+
+.login-btn,
+.kakao-login-btn,
+.naver-login-btn {
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: 500;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    transition: opacity 0.3s;
+}
+
+.login-btn {
+    background-color: #4a90e2;
+    color: #FFFFFF;
+    margin-bottom: 10px;
+}
+
+.login-btn:hover {
+    opacity: 0.9;
+}
+
+.kakao-login-btn {
+    background-color: #FEE500;
+    color: #000000;
+    margin-bottom: 10px;
+}
+
+.kakao-login-btn:hover {
+    opacity: 0.9;
+}
+
+.naver-login-btn {
+    background-color: #03C75A;
+    color: #FFFFFF;
+}
+
+.naver-login-btn:hover {
+    opacity: 0.9;
+}
+
+/* 푸터 스타일 */
+.login-footer {
+    margin-top: 50px;
+    text-align: center;
+}
+
+.login-footer a {
+    display: inline-block;
+    margin: 0 10px;
+    color: #666;
+    text-decoration: none;
+    font-size: 14px;
+}
+
+.login-footer a:hover {
+    color: #4a90e2;
+}
+
+/* 반응형 스타일 */
+@media (max-width: 768px) {
+    .login-container {
+        padding: 20px;
+    }
+
+    .login-title {
+        font-size: 24px;
+    }
+
+    input[type="email"],
+    input[type="password"] {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    .login-btn,
+    .kakao-login-btn,
+    .naver-login-btn {
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+}
+
+fieldset {
+    border: none;
+} 

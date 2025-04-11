@@ -1,46 +1,13 @@
 import React, { useState } from 'react';
-import { motion } from 'framer-motion';
-import '../styles/signupPage.css';
+import "../styles/signupPage.css";
 
 const SignupPage = () => {
   // 배너 스타일 정의
-  const bannerStyle = {
-    textAlign: "center",
-    background: "url('/files/attach/images/106/d20c469d4696da9a3b4396930d911f6c.png') no-repeat center center",
-    backgroundSize: 'cover',
-    backgroundPosition: 'center',
-    height: '400px',
-    width: '95%',
-    maxWidth: '1800px',
-    margin: '0 auto',
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'center',
-    marginBottom: '20px',
-    position: 'relative',
-    borderRadius: '20px',
-    overflow: 'hidden'
-  };
 
 
-  // 배너 콘텐츠 스타일
-  const bannerContentStyle = {
-    position: "relative",
-    zIndex: 2,
-    maxWidth: "1200px",
-    padding: "0 20px",
-    boxSizing: "border-box"
-  };
 
-  // 배너 제목 스타일
-  const bannerTitleStyle = {
-    fontSize: "36px",
-    fontWeight: 600,
-    marginBottom: "20px",
-    letterSpacing: "-0.5px",
-    textShadow: "0 1px 2px rgba(0, 0, 0, 0.2)",
-    color: "#fff"
-  };
+
+
 
   // 폼 상태 관리
   const [formData, setFormData] = useState({

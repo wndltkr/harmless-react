@@ -1,9 +1,10 @@
-import React, { useState, useEffect } from "react";
-import axios from "axios";
+import React, { useState } from "react";
 import "../styles/noticePage.css";
 
 const NoticePage = () => {
     const [currentPage, setCurrentPage] = useState(1);
+    const [searchTerm, setSearchTerm] = useState("");
+    const [selectedCategory, setSelectedCategory] = useState("all");
     const postsPerPage = 10;
 
     // 임시 데이터 (나중에 DB로 대체)
@@ -53,37 +54,6 @@ const NoticePage = () => {
             height: '200px',
             width: 'calc(100% - 40px)',
             margin: '20px auto'
-        }
-    };
-
-    const linkContainerStyle = {
-        position: 'absolute',
-        bottom: 0,
-        left: 0,
-        right: 0,
-        background: 'rgba(255, 255, 255, 0.15)',
-        padding: '20px 0',
-        display: 'flex',
-        justifyContent: 'center',
-        gap: '30px',
-        '@media (max-width: 768px)': {
-            padding: '12px 0',
-            gap: '15px'
-        }
-    };
-
-    const linkItemStyle = {
-        color: '#fff',
-        textDecoration: 'none',
-        fontSize: '18px',
-        fontWeight: '500',
-        transition: 'opacity 0.3s',
-        ':hover': {
-            opacity: 0.8
-        },
-        '@media (max-width: 768px)': {
-            fontSize: '14px',
-            padding: '5px 10px'
         }
     };
 

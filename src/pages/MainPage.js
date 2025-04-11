@@ -44,7 +44,7 @@ const MainPage = () => {
     const section7InView = useInView(section7Ref, { once: true, amount: 0.3 });
 
     return (
-        <main className="main-content">
+        <main className="main-page">
             <SwiperSlider />
 
             <motion.section

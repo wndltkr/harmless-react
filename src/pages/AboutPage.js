@@ -37,7 +37,6 @@ const AboutPage = () => {
 
     const headerStyle = {
         textAlign: "center",
-        color: "#fff",
         fontSize: "36px",
         fontWeight: "bold",
         color: "#000",

@@ -39,7 +39,7 @@ const Header = () => {
                     </ul>
                 </nav>
                 <div className="auth_menu desktop-auth">
-                    <a href="/index.php?mid=index&act=dispMemberLoginForm">로그인</a>
+                    <a href="/login">로그인</a>
                     <span className="divider">|</span>
                     <a href="/signup">회원가입</a>
                 </div>
@@ -50,7 +50,7 @@ const Header = () => {
                 <div className="mobile-menu-header">
                     <div className="close-icon" onClick={toggleMenu}>✖</div>
                     <div className="auth-btns">
-                        <a href="/index.php?mid=index&act=dispMemberLoginForm" className="login-btn">
+                        <a href="/login" className="login-btn">
                             🔒 로그인
                         </a>
                         <a href="/signup" className="signup-btn">

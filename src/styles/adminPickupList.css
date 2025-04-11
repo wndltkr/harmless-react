@@ -1,0 +1,199 @@
+.admin-pickup-list {
+    padding: 20px;
+}
+
+.pickup-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.pickup-header h1 {
+    font-size: 24px;
+    color: #333;
+    margin: 0;
+}
+
+.pickup-filters {
+    display: flex;
+    gap: 10px;
+}
+
+.filter-select {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #444;
+    background-color: white;
+    cursor: pointer;
+}
+
+.pickup-list-container {
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+}
+
+.pickup-table {
+    width: 100%;
+    border-collapse: collapse;
+}
+
+.pickup-table th,
+.pickup-table td {
+    padding: 12px 16px;
+    text-align: left;
+    border-bottom: 1px solid #eee;
+}
+
+.pickup-table th {
+    background-color: #f8f9fa;
+    font-weight: 600;
+    color: #444;
+}
+
+.pickup-table tr:hover {
+    background-color: #f8f9fa;
+}
+
+.type-badge,
+.member-badge,
+.status-badge {
+    display: inline-block;
+    padding: 4px 8px;
+    border-radius: 12px;
+    font-size: 12px;
+    font-weight: 500;
+}
+
+.type-face {
+    background-color: #e3f2fd;
+    color: #1976d2;
+}
+
+.type-non-face {
+    background-color: #fce4ec;
+    color: #c2185b;
+}
+
+.member {
+    background-color: #e8f5e9;
+    color: #2e7d32;
+}
+
+.non-member {
+    background-color: #fff3e0;
+    color: #ef6c00;
+}
+
+.status-pending {
+    background-color: #fff3cd;
+    color: #856404;
+}
+
+.status-approved {
+    background-color: #d4edda;
+    color: #155724;
+}
+
+.status-rejected {
+    background-color: #f8d7da;
+    color: #721c24;
+}
+
+.action-buttons {
+    display: flex;
+    gap: 8px;
+}
+
+.action-button {
+    padding: 4px 8px;
+    border: none;
+    border-radius: 4px;
+    font-size: 12px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.view-button {
+    background-color: #e9ecef;
+    color: #495057;
+}
+
+.approve-button {
+    background-color: #28a745;
+    color: white;
+}
+
+.reject-button {
+    background-color: #dc3545;
+    color: white;
+}
+
+.view-button:hover {
+    background-color: #dee2e6;
+}
+
+.approve-button:hover {
+    background-color: #218838;
+}
+
+.reject-button:hover {
+    background-color: #c82333;
+}
+
+.pagination {
+    display: flex;
+    justify-content: center;
+    gap: 8px;
+    margin-top: 20px;
+}
+
+.page-button {
+    padding: 8px 12px;
+    border: 1px solid #ddd;
+    background-color: white;
+    color: #444;
+    cursor: pointer;
+    transition: all 0.3s;
+}
+
+.page-button:hover {
+    background-color: #f8f9fa;
+    border-color: #adb5bd;
+}
+
+.page-button.active {
+    background-color: #007bff;
+    color: white;
+    border-color: #007bff;
+}
+
+@media (max-width: 768px) {
+    .pickup-header {
+        flex-direction: column;
+        gap: 15px;
+        align-items: stretch;
+    }
+
+    .pickup-filters {
+        flex-wrap: wrap;
+    }
+
+    .filter-select {
+        flex: 1;
+        min-width: 120px;
+    }
+
+    .pickup-table {
+        display: block;
+        overflow-x: auto;
+    }
+
+    .action-buttons {
+        flex-wrap: wrap;
+    }
+} 

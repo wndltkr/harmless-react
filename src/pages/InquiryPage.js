@@ -3,6 +3,8 @@ import "../styles/inquiryPage.css";
 
 const InquiryPage = () => {
     const [currentPage, setCurrentPage] = useState(1);
+    const [searchTerm, setSearchTerm] = useState("");
+    const [selectedCategory, setSelectedCategory] = useState("all");
     const postsPerPage = 10;
 
     // 임시 데이터 (나중에 DB로 대체)
